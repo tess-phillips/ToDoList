@@ -13,12 +13,3 @@ export const createElement = (tagName, attributes = {}) => {
 
   return element;
 };
-
-/**
- * 
- * @param {*} parent element to append to
- * @param {*} elements child elements
- */
-export const appendElements = (parent, elements) => {
-  elements.forEach((element) => parent.appendChild(element));
-};

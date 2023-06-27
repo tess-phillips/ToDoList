@@ -1,18 +1,21 @@
-import { createElement, appendElements } from "./createElements.js"
+import { createElement } from "./createElements.js"
 
 document.querySelector('#push').onclick = function(){
     if(document.querySelector('#newtask input').value.length == 0){
         alert("Please Enter a Task")
     }
     else{
-        const tasksblock = document.querySelector('#tasks')
-        const div1 = createElement("div", {className:"task"})
-        const taskvalue1 = document.querySelector(`#newtask input`).value
-        const box1 = createElement("input", {type:"checkbox", id: "box1", name: "box1"})
-        const label1 = createElement("label", {id :"taskname",for: "box1", innerHTML: taskvalue1})
-        const btn1 = createElement("button", {className:"delete", innerHTML:"delete"})
-        appendElements(div1,[box1,label1,btn1])
-        appendElements(tasksblock,[div1])
+        const tasksBlock = document.querySelector('#tasks');
+        const taskValue = document.querySelector('#newtask input').value;
+        
+        const div = createElement("div", { className: "task" });
+        const checkbox = createElement("input", { type: "checkbox", id: "box1", name: "box1" });
+        const label = createElement("label", { id: "taskname", for: "box1", innerHTML: taskValue });
+        const deleteBtn = createElement("button", { className: "delete", innerHTML: "delete" });
+        
+        div.append(checkbox, label, deleteBtn)
+        tasksBlock.append(div);
+        
 
         // document.querySelector('#tasks').innerHTML += `
         //     <div class="task">
