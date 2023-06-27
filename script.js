@@ -12,8 +12,9 @@ document.querySelector('#push').onclick = function(){
         const checkbox = createElement("input", { type: "checkbox", id: "box1", name: "box1" });
         const label = createElement("label", { id: "taskname", for: "box1", innerHTML: taskValue });
         const deleteBtn = createElement("button", { className: "delete", innerHTML: "delete" });
-        
-        div.append(checkbox, label, deleteBtn)
+        const editBtn = createElement("button", { className: "edit", onclick: editTask, innerHTML: "edit" });
+        // label.append(editBtn)
+        div.append(checkbox, label, deleteBtn, editBtn)
         tasksBlock.append(div);
         
 
@@ -34,7 +35,7 @@ document.querySelector('#push').onclick = function(){
                 this.parentNode.remove();
             }
         }
-
+            
         var tasks = document.querySelectorAll(".task");
         for(var i=0; i<tasks.length; i++){
             tasks[i].onclick = function(){
