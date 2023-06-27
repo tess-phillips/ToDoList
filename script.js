@@ -14,18 +14,11 @@ document.querySelector('#push').onclick = function(){
         appendElements(div1,[box1,label1,btn1])
         appendElements(tasksblock,[div1])
 
-        //inspo for above:
-
-        //this 
-        // <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-        // <label for="vehicle1"> I have a bike</label><br>
-
-        // and this
         // document.querySelector('#tasks').innerHTML += `
         //     <div class="task">
-        //         <span id="taskname">
-        //             ${document.querySelector('#newtask input').value}
-        //         </span>
+        //         <label ype="checkbox" id="taskname" name="box1">
+        //             ${document.querySelector('#newtask input').value} //for box1
+        //         </label>
         //         <button class="delete">
         //             <i class="far fa-trash-alt"></i>
         //         </button>
