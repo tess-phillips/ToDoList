@@ -8,33 +8,33 @@ function toggleCompleted() {
     this.classList.toggle('completed');
 }
   
-// function editTask() {
-//     const taskText = label.textContent;
-//     const editInput = createElement("input", { type: "text", value: taskText });
-//     const saveBtn = createElement("button", { innerHTML: "Save" });
-//     const cancelButton = createElement("button", { innerHTML: "Cancel" });
+function editTask() {
+    const taskText = label.textContent;
+    const editInput = createElement("input", { type: "text", value: taskText });
+    const saveBtn = createElement("button", { innerHTML: "Save" });
+    const cancelButton = createElement("button", { innerHTML: "Cancel" });
   
-//     div.replaceChild(editInput, label);
-//     div.append(saveBtn, cancelButton);
+    div.replaceChild(editInput, label);
+    div.append(saveBtn, cancelButton);
   
-//     saveBtn.onclick = saveEditedTask;
-//     cancelButton.onclick = cancelEdit;
-// }
+    saveBtn.onclick = saveEditedTask;
+    cancelButton.onclick = cancelEdit;
+}
   
-// function saveEditedTask() {
-//     label.textContent = editInput.value;
-//     div.removeChild(editInput);
-//     div.removeChild(saveBtn);
-//     div.removeChild(cancelButton);
-//     div.insertBefore(label, div.secondChild); // Insert label as the first child of div
-// }
+function saveEditedTask() {
+    label.textContent = editInput.value;
+    div.removeChild(editInput);
+    div.removeChild(saveBtn);
+    div.removeChild(cancelButton);
+    div.insertBefore(label, div.secondChild); // Insert label as the first child of div
+}
   
-// function cancelEdit() {
-//     div.removeChild(editInput);
-//     div.removeChild(saveBtn);
-//     div.removeChild(cancelButton);
-//     div.insertBefore(label, div.secondChild); // Insert label as the first child of div
-// }
+function cancelEdit() {
+    div.removeChild(editInput);
+    div.removeChild(saveBtn);
+    div.removeChild(cancelButton);
+    div.insertBefore(label, div.secondChild); // Insert label as the first child of div
+}
 
 document.querySelector('#push').onclick = function () {
   if (document.querySelector('#newtask input').value.length == 0) {
@@ -53,36 +53,32 @@ document.querySelector('#push').onclick = function () {
 
     deleteBtn.onclick = deleteTask;
     div.onclick = toggleCompleted;
-    // editBtn.onclick = editTask;
+    editBtn.onclick = editTask;
 
-    // div.onclick = function () {
-    //   this.classList.toggle('completed');
-    // };
+    // editBtn.onclick = function () {
+    //   const taskText = label.textContent;
+    //   const editInput = createElement("input", { type: "text", value: taskText });
+    //   const saveBtn = createElement("button", { innerHTML: "Save" });
+    //   const cancelButton = createElement("button", { innerHTML: "Cancel" });
 
-    editBtn.onclick = function () {
-      const taskText = label.textContent;
-      const editInput = createElement("input", { type: "text", value: taskText });
-      const saveBtn = createElement("button", { innerHTML: "Save" });
-      const cancelButton = createElement("button", { innerHTML: "Cancel" });
+    //   div.replaceChild(editInput, label);
+    //   div.append(saveBtn, cancelButton);
 
-      div.replaceChild(editInput, label);
-      div.append(saveBtn, cancelButton);
-
-      saveBtn.onclick = function () {
-        label.textContent = editInput.value;
-        div.removeChild(editInput);
-        div.removeChild(saveBtn);
-        div.removeChild(cancelButton);
-        div.insertBefore(label, div.secondChild); // Insert label as the first child of div
-      };
+    //   saveBtn.onclick = function () {
+    //     label.textContent = editInput.value;
+    //     div.removeChild(editInput);
+    //     div.removeChild(saveBtn);
+    //     div.removeChild(cancelButton);
+    //     div.insertBefore(label, div.secondChild); // Insert label as the first child of div
+    //   };
       
-      cancelButton.onclick = function () {
-        div.removeChild(editInput);
-        div.removeChild(saveBtn);
-        div.removeChild(cancelButton);
-        div.insertBefore(label, div.secondChild); // Insert label as the first child of div
-      };
-    };
+    //   cancelButton.onclick = function () {
+    //     div.removeChild(editInput);
+    //     div.removeChild(saveBtn);
+    //     div.removeChild(cancelButton);
+    //     div.insertBefore(label, div.secondChild); // Insert label as the first child of div
+    //   };
+    // };
 
     document.querySelector("#newtask input").value = "";
   }
