@@ -1,18 +1,19 @@
 <html lang="en">
 <head>
-    <title>Simple To Do List</title>
-    <!--Google Font-->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <title>To Do List</title>
 </head>
 <body>
     <div class="container">
+
+        <!-- Input, Add, Sort buttons -->
         <div id="newtask">
             <input type="text" placeholder="Task to be done..">
             <button id="addPush">Add</button>
-            <button id="sortPush">SortByDate</button>
+            <button id="sortPush">SortByDateCreated</button>
         </div>
+        <!-- This is where the tasks that are made in JS go -->
         <div id="tasks"></div>
     </div>
-    <script type="module" src="script.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>

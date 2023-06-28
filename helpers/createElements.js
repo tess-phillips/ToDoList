@@ -1,5 +1,7 @@
 /**
+ * creates DOM elements 
  * e.g. createElement('p',{id: "para3", innerHTML: "slay"})
+ *  ^ creates: <p id="para3">slay</p>
  * @param {*} tagName 
  * @param {*} attributes {attribute: the_attribute}
  * @returns 
