@@ -1,5 +1,5 @@
 /**
- * 
+ * e.g. createElement('p',{id: "para3", innerHTML: "slay"})
  * @param {*} tagName 
  * @param {*} attributes {attribute: the_attribute}
  * @returns 
