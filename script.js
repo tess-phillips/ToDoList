@@ -54,31 +54,6 @@ document.querySelector('#push').onclick = function () {
         editTask(label,div)
     };
 
-    // editBtn.onclick = function () {
-    //   const taskText = label.textContent;
-    //   const editInput = createElement("input", { type: "text", value: taskText });
-    //   const saveBtn = createElement("button", { innerHTML: "Save" });
-    //   const cancelButton = createElement("button", { innerHTML: "Cancel" });
-
-    //   div.replaceChild(editInput, label);
-    //   div.append(saveBtn, cancelButton);
-
-    //   saveBtn.onclick = function () {
-    //     label.textContent = editInput.value;
-    //     div.removeChild(editInput);
-    //     div.removeChild(saveBtn);
-    //     div.removeChild(cancelButton);
-    //     div.insertBefore(label, div.secondChild); // Insert label as the first child of div
-    //   };
-      
-    //   cancelButton.onclick = function () {
-    //     div.removeChild(editInput);
-    //     div.removeChild(saveBtn);
-    //     div.removeChild(cancelButton);
-    //     div.insertBefore(label, div.secondChild); // Insert label as the first child of div
-    //   };
-    // };
-
     document.querySelector("#newtask input").value = "";
   }
 };
