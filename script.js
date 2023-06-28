@@ -1,5 +1,9 @@
 import { createElement } from "./createElements.js";
 
+function deleteTask() {
+    this.parentNode.remove();
+  }
+
 document.querySelector('#push').onclick = function () {
   if (document.querySelector('#newtask input').value.length == 0) {
     alert("Please Enter a Task");
@@ -15,9 +19,7 @@ document.querySelector('#push').onclick = function () {
     div.append(deleteBtn, editBtn,checkbox, label);
     tasksBlock.append(div);
 
-    deleteBtn.onclick = function () {
-      this.parentNode.remove();
-    };
+    deleteBtn.onclick = deleteTask;
 
     div.onclick = function () {
       this.classList.toggle('completed');
