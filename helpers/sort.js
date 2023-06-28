@@ -1,3 +1,9 @@
+/**
+ * sorts by date
+ * @param {*} tasksBlock the div of divs (task block containing all tasks)
+ * @param {*} isSortingAscending boolean
+ * @returns tasksBlock sorted by date either asc or des
+ */
 export function sortByDate(tasksBlock, isSortingAscending) {
     const tasks = Array.from(tasksBlock.children);
   
