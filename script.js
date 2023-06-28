@@ -1,37 +1,5 @@
-import { createElement } from "./createElements.js";
-
-function deleteTask() {
-    this.parentNode.remove();
-}
-
-function toggleCompleted() {
-    this.classList.toggle('completed');
-}
-  
-function editTask(label,div) {
-    const taskText = label.textContent;
-    const editInput = createElement("input", { type: "text", value: taskText });
-    const saveBtn = createElement("button", { innerHTML: "Save" });
-    const cancelButton = createElement("button", { innerHTML: "Cancel" });
-  
-    div.replaceChild(editInput, label);
-    div.append(saveBtn, cancelButton);
-  
-    saveBtn.onclick = function () {
-        label.textContent = editInput.value;
-        div.removeChild(editInput);
-        div.removeChild(saveBtn);
-        div.removeChild(cancelButton);
-        div.insertBefore(label, div.secondChild);
-      };
-      
-      cancelButton.onclick = function () {
-        div.removeChild(editInput);
-        div.removeChild(saveBtn);
-        div.removeChild(cancelButton);
-        div.insertBefore(label, div.secondChild);
-      }; 
-}
+import { createElement } from "./helpers/createElements.js";
+import { editTask, deleteTask, toggleCompleted } from "./editDeleteToggle.js";
 
 document.querySelector('#push').onclick = function () {
   if (document.querySelector('#newtask input').value.length == 0) {
