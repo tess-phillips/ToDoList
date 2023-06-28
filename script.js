@@ -8,7 +8,7 @@ function toggleCompleted() {
     this.classList.toggle('completed');
 }
   
-function editTask() {
+function editTask(label,div) {
     const taskText = label.textContent;
     const editInput = createElement("input", { type: "text", value: taskText });
     const saveBtn = createElement("button", { innerHTML: "Save" });
@@ -17,23 +17,20 @@ function editTask() {
     div.replaceChild(editInput, label);
     div.append(saveBtn, cancelButton);
   
-    saveBtn.onclick = saveEditedTask;
-    cancelButton.onclick = cancelEdit;
-}
-  
-function saveEditedTask() {
-    label.textContent = editInput.value;
-    div.removeChild(editInput);
-    div.removeChild(saveBtn);
-    div.removeChild(cancelButton);
-    div.insertBefore(label, div.secondChild); // Insert label as the first child of div
-}
-  
-function cancelEdit() {
-    div.removeChild(editInput);
-    div.removeChild(saveBtn);
-    div.removeChild(cancelButton);
-    div.insertBefore(label, div.secondChild); // Insert label as the first child of div
+    saveBtn.onclick = function () {
+        label.textContent = editInput.value;
+        div.removeChild(editInput);
+        div.removeChild(saveBtn);
+        div.removeChild(cancelButton);
+        div.insertBefore(label, div.secondChild);
+      };
+      
+      cancelButton.onclick = function () {
+        div.removeChild(editInput);
+        div.removeChild(saveBtn);
+        div.removeChild(cancelButton);
+        div.insertBefore(label, div.secondChild);
+      }; 
 }
 
 document.querySelector('#push').onclick = function () {
@@ -53,7 +50,9 @@ document.querySelector('#push').onclick = function () {
 
     deleteBtn.onclick = deleteTask;
     div.onclick = toggleCompleted;
-    editBtn.onclick = editTask;
+    editBtn.onclick = function(){
+        editTask(label,div)
+    };
 
     // editBtn.onclick = function () {
     //   const taskText = label.textContent;
