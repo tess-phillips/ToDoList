@@ -6,6 +6,7 @@ export function createTask(task) {
   // clone the content of the template (returns a DocumentFragment)
   const domFragment = template.content.cloneNode(true);
   console.log(domFragment);
+  // add content into the span (<li> element)
   domFragment.querySelector("#toDo").textContent = task;
   tasksBlock.appendChild(domFragment);
 }
