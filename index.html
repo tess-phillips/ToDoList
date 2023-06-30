@@ -1,19 +1,32 @@
 <html lang="en">
-<head>
+  <head>
     <title>To Do List</title>
-</head>
-<body>
-    <div class="container">
-
-        <!-- Input, Add, Sort buttons -->
+  </head>
+  <body>
+    <main>
+      <!-- Input, Add, Sort buttons -->
+      <section id="inputSection">
         <div id="newtask">
-            <input type="text" placeholder="Task to be done..">
-            <button id="addPush">Add</button>
-            <button id="sortPush">SortByDateCreated</button>
+          <input type="text" placeholder="Task to be done.." />
+          <button id="addPush">Add</button>
+          <button id="sortPush">SortByDateCreated</button>
         </div>
-        <!-- This is where the tasks that are made in JS go -->
-        <div id="tasks"></div>
-    </div>
+      </section>
+      <!-- This is where the tasks that are made in JS go -->
+      <section id="task-list">
+        <div id="tasksContainer">
+          <template id="taskTemplate">
+            <ul>
+              <li id="task">
+                <span id="toDo"></span>
+                <button id="editBtn" class="editBtn">Edit</button>
+                <button id="deleteBtn" class="btn">Delete</button>
+              </li>
+            </ul>
+          </template>
+        </div>
+      </section>
+    </main>
     <script type="module" src="main.js"></script>
-</body>
+  </body>
 </html>
