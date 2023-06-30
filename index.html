@@ -13,18 +13,17 @@
         </div>
       </section>
       <!-- This is where the tasks that are made in JS go -->
-      <section id="task-list">
-        <div id="tasksContainer">
+      <section id="tasksSection">
+        <ul id="tasksContainer">
           <template id="taskTemplate">
-            <ul>
-              <li id="task">
-                <span id="toDo"></span>
-                <button id="editBtn" class="editBtn">Edit</button>
-                <button id="deleteBtn" class="btn">Delete</button>
-              </li>
-            </ul>
+            <li id="task">
+              <span id="toDo"></span>
+              <button id="editBtn" class="btn">Edit</button>
+              <button id="deleteBtn" class="btn">Delete</button>
+              <input type="checkbox" name="markDone" />
+            </li>
           </template>
-        </div>
+        </ul>
       </section>
     </main>
     <script type="module" src="main.js"></script>

@@ -1,14 +1,15 @@
-import { createElement } from "./helpers/createElements.js";
+import { createTask } from "./helpers/createElements.js";
 import { editTask, deleteTask } from "./helpers/editDelete.js";
 import { sortByDate } from "./helpers/sort.js";
 
 // Date starts in descending order
 let isSortingAscending = false;
 
+// Define global variables
+const tasksBlock = document.querySelector("#tasksContainer");
+
 // This defines what happens when the SortByDate button is clicked
 document.querySelector("#sortPush").onclick = function () {
-  const tasksBlock = document.querySelector("#tasks");
-
   // This calls one of the import functions sortByDate, that actually does the reordering
   const sortedTasks = sortByDate(tasksBlock, isSortingAscending);
 
@@ -26,35 +27,13 @@ document.querySelector("#addPush").onclick = function () {
   } else {
     // if something IS added:
 
-    const tasksBlock = document.querySelector("#tasksContainer");
     const taskValue = document.querySelector("#newtask input").value;
+    console.log(taskValue);
 
     // makes the div for the task to go in
-    const div = createElement("div", { className: "task" });
+    const newTask = createTask(taskValue);
     const currentDate = new Date();
-    div.setAttribute("data-date", currentDate.toISOString());
-
-    // created the checkbox, label (the task text), edit and delete buttons
-    const checkbox = createElement("input", {
-      type: "checkbox",
-      id: "box1",
-      name: "box1",
-    });
-    const label = createElement("label", {
-      id: "taskname",
-      htmlFor: "box1",
-      innerHTML: taskValue,
-    });
-    const deleteBtn = createElement("button", {
-      className: "delete",
-      innerHTML: "delete",
-    });
-    const editBtn = createElement("button", {
-      className: "edit",
-      innerHTML: "edit",
-    });
-    div.append(deleteBtn, editBtn, checkbox, label);
-    tasksBlock.append(div);
+    newTask.setAttribute("data-date", currentDate.toISOString());
 
     // this defines what happens when edit and delete are pressed (functions called are in editDelete.js)
     deleteBtn.onclick = deleteTask;

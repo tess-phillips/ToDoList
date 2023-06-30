@@ -1,4 +1,4 @@
-import { createElement } from "./createElements.js";
+import { createTask } from "./createElements.js";
 
 // removes the task
 export function deleteTask() {
@@ -6,7 +6,7 @@ export function deleteTask() {
 }
 
 // edits the task
-export function editTask(label,div) {
+export function editTask(label, div) {
   // gets the text that is already on the task
   const taskText = label.textContent;
 
@@ -26,11 +26,11 @@ export function editTask(label,div) {
     div.removeChild(cancelButton);
     div.insertBefore(label, div.secondChild);
   };
-    
+
   cancelButton.onclick = function () {
     div.removeChild(editInput);
     div.removeChild(saveBtn);
     div.removeChild(cancelButton);
     div.insertBefore(label, div.secondChild);
-  }; 
+  };
 }
