@@ -18,17 +18,17 @@
           <!-- single task template -->
           <template id="taskTemplate">
             <li id="task">
-              <span id="toDo"></span>
-              <button id="editBtn" class="btn">Edit</button>
-              <button id="deleteBtn" class="btn">Delete</button>
-              <input type="checkbox" name="markDone" />
-              <input type="text" id="editInput" style="display: none" />
-              <button id="saveBtn" class="btn" style="display: none">
-                Save
-              </button>
-              <button id="cancelBtn" class="btn" style="display: none">
-                Cancel
-              </button>
+              <div class="taskDiv">
+                <span id="toDo"></span>
+                <button id="editBtn" class="btn">Edit</button>
+                <button id="deleteBtn" class="btn">Delete</button>
+              </div>
+              <div class="editTaskDiv" style="display: none">
+                <input type="checkbox" name="markDone" />
+                <input type="text" id="editInput" />
+                <button id="saveBtn" class="btn">Save</button>
+                <button id="cancelBtn" class="btn">Cancel</button>
+              </div>
             </li>
           </template>
         </ul>

@@ -6,18 +6,20 @@ export function deleteTask() {
 }
 
 // edits the task
-export function editTask(label, div) {
+export function editTask(task) {
   // gets the text that is already on the task
-  const taskText = label.textContent;
-
+  const span = task.querySelector("span");
+  const editInput = task.querySelector("#editInput");
+  const taskText = span.textContent;
+  console.log(taskText);
   // creates the input and new buttons
-  const editInput = createElement("input", { type: "text", value: taskText });
-  const saveBtn = createElement("button", { innerHTML: "Save" });
-  const cancelButton = createElement("button", { innerHTML: "Cancel" });
+  // const editInput = createElement("input", { type: "text", value: taskText });
+  // const saveBtn = createElement("button", { innerHTML: "Save" });
+  // const cancelButton = createElement("button", { innerHTML: "Cancel" });
 
   // removes the existing text with the input (containing the prev task), save and cancel buttons
-  div.replaceChild(editInput, label);
-  div.append(saveBtn, cancelButton);
+  task.replaceChild(editInput, span);
+  // div.append(saveBtn, cancelButton);
 
   saveBtn.onclick = function () {
     label.textContent = editInput.value;
@@ -33,4 +35,12 @@ export function editTask(label, div) {
     div.removeChild(cancelButton);
     div.insertBefore(label, div.secondChild);
   };
+}
+
+function toggleVisibility(div) {
+  if (div.style.display === "none") {
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
 }
