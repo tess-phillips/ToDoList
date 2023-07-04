@@ -5,6 +5,6 @@ test('Submitting a new task adds it to the list', () => {
     const expectBefore = document.querySelector("#tasksContainer").children.length -1
     const test1 = createTask('Test')
     const expectAfter = document.querySelector("#tasksContainer").children.length -1
-    equal(expectBefore, expectAfter)
+    equal(expectBefore+1, expectAfter)
     test1.remove()
   })
