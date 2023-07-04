@@ -11,6 +11,9 @@ export function handleBtnClick(btn) {
     case "saveBtn":
       saveTask(btn);
       break;
+    case "cancelBtn":
+      cancelEdit(task);
+      break;
   }
 }
 // removes the task
@@ -51,6 +54,14 @@ function saveTask(task) {
   updateSpan.textContent = editInput.value;
 
   // show/hides divs
+  toggleVisibility(editTaskDiv);
+  toggleVisibility(taskDiv);
+}
+
+function cancelEdit(task) {
+  const editTaskDiv = task.parentNode;
+  const taskContainer = editTaskDiv.parentNode;
+  const taskDiv = taskContainer.querySelector(".taskDiv");
   toggleVisibility(editTaskDiv);
   toggleVisibility(taskDiv);
 }
