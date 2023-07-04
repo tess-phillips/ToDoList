@@ -1,5 +1,5 @@
 import { createTask } from "./helpers/createElements.js"
-import { test, equal, notEqual } from "./helpers/testHelpers.js"
+import { test, equal } from "./helpers/testHelpers.js"
 
 test('Submitting a new task adds it to the list', () => {
     const expectBefore = document.querySelector("#tasksContainer").children.length -1
