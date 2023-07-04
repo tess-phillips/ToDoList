@@ -1,5 +1,5 @@
 import { createTask } from "./helpers/createElements.js";
-import { editTask, deleteTask } from "./helpers/editDelete.js";
+import { handleBtnClick } from "./helpers/editDelete.js";
 import { sortByDate } from "./helpers/sort.js";
 
 // Date starts in descending order
@@ -34,13 +34,20 @@ document.querySelector("#addPush").onclick = function () {
     const currentDate = new Date();
     newTask.setAttribute("data-date", currentDate.toISOString());
 
-    console.log(newTask);
-    // this defines what happens when edit and delete are pressed (functions called are in editDelete.js)
-    deleteBtn.onclick = deleteTask;
-    editBtn.onclick = function () {
-      editTask(newTask);
-    };
+    // TESS' CODE
+    // console.log(newTask);
+    // // this defines what happens when edit and delete are pressed (functions called are in editDelete.js)
+    // deleteBtn.onclick = deleteTask;
+    // editBtn.onclick = function () {
+    //   editTask(newTask);
+    // };
     // removes the text from the input area so it is empty for the next task
     document.querySelector("#newtask input").value = "";
   }
 };
+
+const tasksSection = document.querySelector("#tasksSection");
+
+tasksSection.addEventListener("click", (event) => {
+  handleBtnClick(event.target);
+});

@@ -1,8 +1,16 @@
 import { createTask } from "./createElements.js";
 
+export function handleBtnClick(btn) {
+  switch (btn.id) {
+    case "deleteBtn":
+      deleteTask(btn);
+  }
+}
 // removes the task
-export function deleteTask() {
-  this.parentNode.remove();
+export function deleteTask(btn) {
+  const item = btn.parentNode.parentNode;
+  console.log(item);
+  item.remove();
 }
 
 // edits the task
