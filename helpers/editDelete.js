@@ -6,6 +6,8 @@ export function handleBtnClick(btn) {
       deleteTask(btn);
     case "editBtn":
       editTask(btn);
+    case "saveBtn":
+      saveTask(btn);
   }
 }
 // removes the task
@@ -32,6 +34,20 @@ function editTask(task) {
   const editTaskDiv = taskDiv.querySelector(".editTaskDiv");
   toggleVisibility(editTaskDiv);
 }
+
+// saves the task
+// function saveTask(task) {
+//   // get parent div
+//   const editTaskDiv = task.parentNode;
+//   console.log(editTaskDiv);
+//   const taskDiv = editTaskDiv.parentNode;
+
+//   const editInput = editTaskDiv.querySelector("#editInput");
+
+//   const span = editTaskDiv.querySelector("#toDo");
+//   span.textContent = editInput.value;
+//   toggleVisibility
+// }
 
 function toggleVisibility(div) {
   if (div.style.display === "none") {
