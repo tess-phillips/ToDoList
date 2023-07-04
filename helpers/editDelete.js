@@ -4,10 +4,13 @@ export function handleBtnClick(btn) {
   switch (btn.id) {
     case "deleteBtn":
       deleteTask(btn);
+      break;
     case "editBtn":
       editTask(btn);
+      break;
     case "saveBtn":
       saveTask(btn);
+      break;
   }
 }
 // removes the task
@@ -36,18 +39,21 @@ function editTask(task) {
 }
 
 // saves the task
-// function saveTask(task) {
-//   // get parent div
-//   const editTaskDiv = task.parentNode;
-//   console.log(editTaskDiv);
-//   const taskDiv = editTaskDiv.parentNode;
+function saveTask(task) {
+  // get parent divs
+  const editTaskDiv = task.parentNode;
+  const taskContainer = editTaskDiv.parentNode;
+  const taskDiv = taskContainer.querySelector(".taskDiv");
 
-//   const editInput = editTaskDiv.querySelector("#editInput");
+  // get value/text from the new input and update the span text content
+  const editInput = editTaskDiv.querySelector("#editInput");
+  const updateSpan = taskDiv.querySelector("#toDo");
+  updateSpan.textContent = editInput.value;
 
-//   const span = editTaskDiv.querySelector("#toDo");
-//   span.textContent = editInput.value;
-//   toggleVisibility
-// }
+  // show/hides divs
+  toggleVisibility(editTaskDiv);
+  toggleVisibility(taskDiv);
+}
 
 function toggleVisibility(div) {
   if (div.style.display === "none") {
