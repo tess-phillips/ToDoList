@@ -1,6 +1,8 @@
 import { createTask } from "./helpers/createElements.js";
 import { handleBtnClick } from "./helpers/editDelete.js";
 import { sortByDate } from "./helpers/sort.js";
+import { test, equal } from "./helpers/testHelpers.js"
+
 
 // Date starts in descending order
 let isSortingAscending = false;
@@ -51,3 +53,14 @@ const tasksSection = document.querySelector("#tasksSection");
 tasksSection.addEventListener("click", (event) => {
   handleBtnClick(event.target);
 });
+
+// import { createTask } from "./helpers/createElements"
+// import { test, equal } from "./helpers/testHelpers"
+
+test('Submitting a new task adds it to the list', () => {
+    const expectBefore = document.querySelector("#tasksContainer").children.length -1
+    const test1 = createTask('Test')
+    const expectAfter = document.querySelector("#tasksContainer").children.length -1
+    equal(expectBefore +1, expectAfter)
+    test1.remove()
+  })

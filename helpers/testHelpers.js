@@ -8,18 +8,18 @@ export function equal(actual, expected, message) {
     }
   }
   
-  export function notEqual(actual, expected, message) {
-    if (actual !== expected) {
-      const defaultMessage = `${expected} is different to ${actual}`;
-      console.info("Pass: " + (message || defaultMessage));
-    } else {
-      const defaultMessage = `${expected} is the same as ${actual}`;
-      console.error("Fail: " + (message || defaultMessage));
-    }
-  }
+export function notEqual(actual, expected, message) {
+if (actual !== expected) {
+    const defaultMessage = `${expected} is different to ${actual}`;
+    console.info("Pass: " + (message || defaultMessage));
+} else {
+    const defaultMessage = `${expected} is the same as ${actual}`;
+    console.error("Fail: " + (message || defaultMessage));
+}
+}
   
-  export function test(name, testFunction) {
-    console.group(name);
-    testFunction();
-    console.groupEnd(name);
-  }
+export function test(name, testFunction) {
+console.group(name);
+testFunction();
+console.groupEnd(name);
+}

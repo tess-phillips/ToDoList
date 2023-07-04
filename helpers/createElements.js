@@ -9,5 +9,9 @@ export function createTask(task) {
   domFragment.querySelector("#toDo").textContent = task;
   tasksBlock.appendChild(domFragment);
   const newTask = document.querySelector("#task");
+
+  var numberOfTasks = tasksBlock.children.length - 1
+  console.log(numberOfTasks)
   return newTask;
 }
+
