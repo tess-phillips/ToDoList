@@ -1,7 +1,8 @@
 import { createTask } from "./createElements.js";
 
 export function handleBtnClick(btn) {
-  switch (btn.id) {
+  // get the second class element for each button because id must be unique
+  switch (btn.classList[1]) {
     case "deleteBtn":
       deleteTask(btn);
       break;
