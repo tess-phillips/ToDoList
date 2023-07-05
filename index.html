@@ -1,19 +1,39 @@
 <html lang="en">
-<head>
+  <head>
     <title>To Do List</title>
-</head>
-<body>
-    <div class="container">
-
-        <!-- Input, Add, Sort buttons -->
+  </head>
+  <body>
+    <main>
+      <!-- Input, Add, Sort buttons -->
+      <section id="inputSection">
         <div id="newtask">
-            <input type="text" placeholder="Task to be done..">
-            <button id="addPush">Add</button>
-            <button id="sortPush">SortByDateCreated</button>
+          <input type="text" placeholder="Task to be done.." />
+          <button id="addPush">Add</button>
+          <button id="sortPush">SortByDateCreated</button>
         </div>
-        <!-- This is where the tasks that are made in JS go -->
-        <div id="tasks"></div>
-    </div>
+      </section>
+      <!-- This is where the tasks that are made in JS go -->
+      <section id="tasksSection">
+        <ul id="tasksContainer">
+          <!-- single task template -->
+          <template id="taskTemplate">
+            <li id="task">
+              <div class="taskDiv">
+                <span id="toDo"></span>
+                <button id="editBtn" class="btn editBtn">Edit</button>
+                <button id="deleteBtn" class="btn deleteBtn">Delete</button>
+                <input type="checkbox" name="markDone" />
+              </div>
+              <div class="editTaskDiv" style="display: none">
+                <input type="text" id="editInput" class="editInput" />
+                <button id="saveBtn" class="btn saveBtn">Save</button>
+                <button id="cancelBtn" class="btn cancelBtn">Cancel</button>
+              </div>
+            </li>
+          </template>
+        </ul>
+      </section>
+    </main>
     <script type="module" src="main.js"></script>
-</body>
+  </body>
 </html>

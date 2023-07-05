@@ -1,36 +1,81 @@
-import { createElement } from "./createElements.js";
+import { createTask } from "./createElements.js";
 
+export function handleBtnClick(btn) {
+  // get the second class element for each button because id must be unique
+  switch (btn.classList[1]) {
+    case "deleteBtn":
+      deleteTask(btn);
+      break;
+    case "editBtn":
+      editTask(btn);
+      break;
+    case "saveBtn":
+      saveTask(btn);
+      break;
+    case "cancelBtn":
+      cancelEdit(btn);
+      break;
+  }
+}
 // removes the task
-export function deleteTask() {
-  this.parentNode.remove();
+function deleteTask(task) {
+  const item = task.parentNode.parentNode;
+  item.remove();
 }
 
 // edits the task
-export function editTask(label,div) {
-  // gets the text that is already on the task
-  const taskText = label.textContent;
+function editTask(task) {
+  // get parent divs
+  const parentDiv = task.parentNode;
+  const taskDiv = parentDiv.parentNode;
 
-  // creates the input and new buttons
-  const editInput = createElement("input", { type: "text", value: taskText });
-  const saveBtn = createElement("button", { innerHTML: "Save" });
-  const cancelButton = createElement("button", { innerHTML: "Cancel" });
+  // grab text that needs to be edited and place it inside the (edit)input
+  const span = taskDiv.querySelector("#toDo");
+  let text = span.textContent;
 
-  // removes the existing text with the input (containing the prev task), save and cancel buttons
-  div.replaceChild(editInput, label);
-  div.append(saveBtn, cancelButton);
+  const editInput = taskDiv.querySelector("#editInput");
+  editInput.value = text;
 
-  saveBtn.onclick = function () {
-    label.textContent = editInput.value;
-    div.removeChild(editInput);
-    div.removeChild(saveBtn);
-    div.removeChild(cancelButton);
-    div.insertBefore(label, div.secondChild);
-  };
-    
-  cancelButton.onclick = function () {
-    div.removeChild(editInput);
-    div.removeChild(saveBtn);
-    div.removeChild(cancelButton);
-    div.insertBefore(label, div.secondChild);
-  }; 
+  // Show/hide parent divs
+  toggleVisibility(parentDiv);
+  const editTaskDiv = taskDiv.querySelector(".editTaskDiv");
+  toggleVisibility(editTaskDiv);
+}
+
+// saves the task
+function saveTask(task) {
+  // get parent divs
+  const editTaskDiv = task.parentNode;
+  const taskContainer = editTaskDiv.parentNode;
+  const taskDiv = taskContainer.querySelector(".taskDiv");
+
+  // get value/text from the new input and update the span text content
+  const editInput = editTaskDiv.querySelector("#editInput");
+  const updateSpan = taskDiv.querySelector("#toDo");
+  updateSpan.textContent = editInput.value;
+
+  // show/hides divs
+  toggleVisibility(editTaskDiv);
+  toggleVisibility(taskDiv);
+}
+
+function cancelEdit(task) {
+  const editTaskDiv = task.parentNode;
+  const taskContainer = editTaskDiv.parentNode;
+  const taskDiv = taskContainer.querySelector(".taskDiv");
+
+  const editInput = editTaskDiv.querySelector("#editInput");
+  editInput.value = "";
+
+  // Show/hide divs
+  toggleVisibility(editTaskDiv);
+  toggleVisibility(taskDiv);
+}
+
+function toggleVisibility(div) {
+  if (div.style.display === "none") {
+    div.style.display = "block";
+  } else {
+    div.style.display = "none";
+  }
 }
