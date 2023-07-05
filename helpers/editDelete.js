@@ -12,7 +12,7 @@ export function handleBtnClick(btn) {
       saveTask(btn);
       break;
     case "cancelBtn":
-      cancelEdit(task);
+      cancelEdit(btn);
       break;
   }
 }
@@ -62,6 +62,11 @@ function cancelEdit(task) {
   const editTaskDiv = task.parentNode;
   const taskContainer = editTaskDiv.parentNode;
   const taskDiv = taskContainer.querySelector(".taskDiv");
+
+  const editInput = editTaskDiv.querySelector("#editInput");
+  editInput.value = "";
+
+  // Show/hide divs
   toggleVisibility(editTaskDiv);
   toggleVisibility(taskDiv);
 }
