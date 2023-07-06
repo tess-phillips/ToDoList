@@ -11,3 +11,4 @@ export function createTask(task) {
   const newTask = document.querySelector("#task");
   return newTask;
 }
+
