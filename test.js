@@ -13,19 +13,22 @@ test("Submitting a new task adds it to the list", () => {
 });
 
 test("Submitting a new task adds it to the list (simulating button push)", () => {
-  const expectBefore =
-    document.querySelector("#tasksContainer").children.length - 1;
+  // the number of tasks in the #taskContainer is the number of children - 1
+  const expectBefore = document.querySelector("#tasksContainer").children.length - 1;
 
-  // simulating the #addPush button.
-  document.querySelector("#addPush").onclick = function () {
-    createTask("Test");
-    document.querySelector("#newtask input").value = "";
-  };
-  //I would have just done this line below but I would have had to mess with main to get a "test" value in
-  document.querySelector("#addPush").click();
+  const input = document.querySelector("#newTask input");
+  input.value = "testSubmit";
 
+  // simulate the click of addPush button to create a new task
+  const addPushBtn = document.querySelector("#addPush");
+  addPushBtn.click();
+
+  // the number of tasks in the #taskContainer is the number of children - 1
   const expectAfter =
     document.querySelector("#tasksContainer").children.length - 1;
+
+  // there should be a difference of 1 task because we just created 1. this is the equiv to saying
+  // equal(expectAfter - expetBefore, 1)
   equal(expectBefore + 1, expectAfter);
 
   document.querySelector("#task").remove();
