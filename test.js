@@ -13,6 +13,7 @@ test("Submitting a new task adds it to the list", () => {
 });
 
 test("Submitting a new task adds it to the list (simulating button push)", () => {
+  // the number of tasks in the #taskContainer is the number of children - 1
   const expectBefore = document.querySelector("#tasksContainer").children.length - 1;
 
   const input = document.querySelector("#newTask input");
@@ -22,8 +23,12 @@ test("Submitting a new task adds it to the list (simulating button push)", () =>
   const addPushBtn = document.querySelector("#addPush");
   addPushBtn.click();
 
+  // the number of tasks in the #taskContainer is the number of children - 1
   const expectAfter =
     document.querySelector("#tasksContainer").children.length - 1;
+
+  // there should be a difference of 1 task because we just created 1. this is the equiv to saying
+  // equal(expectAfter - expetBefore, 1)
   equal(expectBefore + 1, expectAfter);
 
   document.querySelector("#task").remove();
