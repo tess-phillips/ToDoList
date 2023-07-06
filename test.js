@@ -34,27 +34,26 @@ test("Submitting a new task adds it to the list (simulating button push)", () =>
 test("Deleting a task from list", () => {
   // create an input value and add it to the list
   const input = document.querySelector("#newTask input");
-  input.value = "test";
+  input.value = "testDelete";
 
   // simulate the click of addPush button to create a new task
-  document.querySelector("#addPush").click(createTask(input.value));
+  const addPushBtn = document.querySelector("#addPush");
+  addPushBtn.click();
 
-  /*  Create array with all "span" elements:
-      with getElementsByTagName you get a HTMLCollection that includes
-      both the span from the template and the newly generated one.
-      There' ll be 2 elements
+  /* Create array with all "span" elements, corresponding to the task:
+     considering we push only 1 task we should get an array of 1 elements
   */
   const listItemsArray = document.getElementsByTagName("span");
 
   // simulate the click of deleteBtn to delete the task
-  const deleteBtn = document.querySelector(".deleteBtn");
-  deleteBtn.click();
+  const deleteBtnArray = document.querySelector(".deleteBtn");
+  deleteBtnArray.click();
 
-  // after the deletion the template won't be visible to the HTMLCollection
-  let expectResult; // expected: undefined
+  // Once the span is deleted the array should have 0 elements
+  let expectResult = 0;
 
   // the new task/span should have been removed
-  const actualResult = listItemsArray.lenght;
+  const actualResult = listItemsArray.length;
   equal(actualResult, expectResult);
 });
 
