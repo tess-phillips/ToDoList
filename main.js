@@ -1,6 +1,8 @@
 import { createTask } from "./helpers/createElements.js";
 import { handleBtnClick } from "./helpers/editDelete.js";
 import { sortByDate } from "./helpers/sort.js";
+import { test, equal } from "./helpers/testHelpers.js"
+
 
 // Date starts in descending order
 let isSortingAscending = false;
