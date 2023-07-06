@@ -30,19 +30,8 @@ document.querySelector("#addPush").onclick = function () {
     // if something IS added:
 
     const taskValue = document.querySelector("#newtask input").value;
+    createTask(taskValue)
 
-    // makes the div for the task to go in
-    const newTask = createTask(taskValue);
-    const currentDate = new Date();
-    newTask.setAttribute("data-date", currentDate.toISOString());
-
-    // TESS' CODE
-    // console.log(newTask);
-    // // this defines what happens when edit and delete are pressed (functions called are in editDelete.js)
-    // deleteBtn.onclick = deleteTask;
-    // editBtn.onclick = function () {
-    //   editTask(newTask);
-    // };
     // removes the text from the input area so it is empty for the next task
     document.querySelector("#newtask input").value = "";
   }

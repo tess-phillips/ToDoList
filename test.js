@@ -8,3 +8,7 @@ test('Submitting a new task adds it to the list', () => {
     equal(expectBefore+1, expectAfter)
     test1.remove()
   })
+
+// test("Pressing the SortByDate button sorts the tasks", () => {
+
+// })
