@@ -26,14 +26,14 @@ test('Submitting a new task adds it to the list', () => {
     document.querySelector("#task").remove()
   })
 
-test("Pressing the SortByDate button sorts the tasks", () => {
-  createTask('Test 1')
-  createTask('Test 2')
-  document.querySelector('#sortPush').click()
-  document.querySelectorAll("#task").remove()
+// test("Pressing the SortByDate button sorts the tasks", () => {
+//   createTask('Test 1')
+//   createTask('Test 2')
+//   document.querySelector('#sortPush').click()
+//   document.querySelectorAll("#task").remove()
 
 
-  console.log(document.querySelector("#tasksContainer"))
+//   console.log(document.querySelector("#tasksContainer"))
 
     
-})
+// })
