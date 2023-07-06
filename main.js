@@ -44,7 +44,7 @@ document.querySelector("#addPush").onclick = function () {
     // };
     // removes the text from the input area so it is empty for the next task
     document.querySelector("#newtask input").value = "";
-    console.log(tasksBlock)
+    // console.log(tasksBlock)
   }
 };
 

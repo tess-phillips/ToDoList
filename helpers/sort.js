@@ -5,7 +5,9 @@
  * @returns tasksBlock sorted by date either asc or des
  */
 export function sortByDate(tasksBlock, isSortingAscending) {
+    console.log(tasksBlock)
     const tasks = Array.from(tasksBlock.children);
+    // console.log(tasks)
   
     const sortedTasks = tasks.slice().sort((taskA, taskB) => {
       const dateA = new Date(taskA.dataset.date);
