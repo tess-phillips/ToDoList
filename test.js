@@ -9,6 +9,6 @@ test('Submitting a new task adds it to the list', () => {
     test1.remove()
   })
 
-test("Pressing the SortByDate button sorts the tasks", () => {
+// test("Pressing the SortByDate button sorts the tasks", () => {
 
-})
+// })
