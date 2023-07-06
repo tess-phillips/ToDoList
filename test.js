@@ -11,10 +11,19 @@ test('Submitting a new task adds it to the list', () => {
 
   test('Submitting a new task adds it to the list (simulating button push)', () => {
     const expectBefore = document.querySelector("#tasksContainer").children.length -1
-    const test1 = createTask('Test')
+
+    // simulating the #addPush button.
+    document.querySelector("#addPush").onclick = function () {
+        const taskValue = "test1";
+        createTask(taskValue)
+        document.querySelector("#newtask input").value = "";
+      }
+    //I would have just done this line below but I would have had to mess with main to get a "test" value in
+    document.querySelector("#addPush").click()
+
     const expectAfter = document.querySelector("#tasksContainer").children.length -1
     equal(expectBefore+1, expectAfter)
-    test1.remove()
+    // test1.remove()
   })
 
 // test("Pressing the SortByDate button sorts the tasks", () => {
