@@ -17,12 +17,12 @@
         <ul id="tasksContainer">
           <!-- single task template -->
           <template id="taskTemplate">
-            <li id="task">
+            <li id="task" class="listElement">
               <div class="taskDiv">
+                <input type="checkbox" name="markDone" class="checkbox" />
                 <span id="toDo"></span>
                 <button id="editBtn" class="btn editBtn">Edit</button>
                 <button id="deleteBtn" class="btn deleteBtn">Delete</button>
-                <input type="checkbox" name="markDone" />
               </div>
               <div class="editTaskDiv" style="display: none">
                 <input type="text" id="editInput" class="editInput" />

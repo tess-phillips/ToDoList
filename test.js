@@ -60,6 +60,31 @@ test("Deleting a task from list", () => {
   equal(actualResult, expectResult);
 });
 
+test("Ticking off an item", () => {
+  // create a new task
+  let newTask = createTask("Checkbox test");
+  const checkbox = document.querySelector(`.checkbox`);
+
+  /* run a function that simulates the click on the checkbox and 
+     add a new class to the task, marking it as completed */
+  function tickoff() {
+    checkbox.click();
+    newTask.classList.add("completed");
+
+    // Having already one class(".listElement"), ".completed" will be the second element of the array
+    return newTask.classList[1];
+  }
+
+  // compare results
+  const actualResult = tickoff();
+
+  // look for the new task and check the second value in the classlist
+  newTask = document.querySelector(".listElement");
+  const expectResult = newTask.classList[1];
+  equal(actualResult, expectResult);
+  newTask.remove();
+});
+
 // test("Pressing the SortByDate button sorts the tasks", () => {
 //   createTask('Test 1')
 //   createTask('Test 2')
