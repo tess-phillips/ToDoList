@@ -7,7 +7,14 @@ export function createTask(task) {
   const domFragment = template.content.cloneNode(true);
   // add content into the span (<li> element)
   domFragment.querySelector("#toDo").textContent = task;
+
+  const currentDate = new Date();
+  domFragment.querySelector("#date").setAttribute("data-date", currentDate.toISOString())
   tasksBlock.appendChild(domFragment);
-  const newTask = document.querySelector("#task");
-  return newTask;
+  // const newTask = document.querySelector("#task");
+
+  // // const newTask = createTask(taskValue);
+  // const currentDate = new Date();
+  // newTask.setAttribute("data-date", currentDate.toISOString());
+  // return newTask;
 }

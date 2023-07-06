@@ -28,11 +28,12 @@ document.querySelector("#addPush").onclick = function () {
     // if something IS added:
 
     const taskValue = document.querySelector("#newtask input").value;
+    createTask(taskValue)
 
     // makes the div for the task to go in
-    const newTask = createTask(taskValue);
-    const currentDate = new Date();
-    newTask.setAttribute("data-date", currentDate.toISOString());
+    // const newTask = createTask(taskValue);
+    // const currentDate = new Date();
+    // newTask.setAttribute("data-date", currentDate.toISOString());
 
     // TESS' CODE
     // console.log(newTask);
@@ -43,6 +44,7 @@ document.querySelector("#addPush").onclick = function () {
     // };
     // removes the text from the input area so it is empty for the next task
     document.querySelector("#newtask input").value = "";
+    console.log(tasksBlock)
   }
 };
 
