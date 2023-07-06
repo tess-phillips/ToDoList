@@ -12,7 +12,8 @@ export function createTask(task) {
   const currentDate = new Date();
   domFragment.querySelector("#task").setAttribute("data-date", currentDate.toISOString())
   tasksBlock.appendChild(domFragment);
-
-  // return newTask;
+  
+  const newTask = document.querySelector("#task");
+  return newTask;
 }
 
