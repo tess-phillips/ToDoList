@@ -9,6 +9,21 @@ test('Submitting a new task adds it to the list', () => {
     test1.remove()
   })
 
-// test("Pressing the SortByDate button sorts the tasks", () => {
+  test('Submitting a new task adds it to the list (simulating button push)', () => {
+    const expectBefore = document.querySelector("#tasksContainer").children.length -1
+    const test1 = createTask('Test')
+    const expectAfter = document.querySelector("#tasksContainer").children.length -1
+    equal(expectBefore+1, expectAfter)
+    test1.remove()
+  })
 
+// test("Pressing the SortByDate button sorts the tasks", () => {
+//   const test1 = createTask('Test 1')
+//   const test2 = createTask('Test 2')
+//   document.querySelector('#sortPush').click()
+//   document.querySelector('#sortPush').click()
+
+//   console.log(document.querySelector("#tasksContainer"))
+
+    
 // })
