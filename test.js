@@ -13,16 +13,14 @@ test("Submitting a new task adds it to the list", () => {
 });
 
 test("Submitting a new task adds it to the list (simulating button push)", () => {
-  const expectBefore =
-    document.querySelector("#tasksContainer").children.length - 1;
+  const expectBefore = document.querySelector("#tasksContainer").children.length - 1;
 
-  // simulating the #addPush button.
-  document.querySelector("#addPush").onclick = function () {
-    createTask("Test");
-    document.querySelector("#newtask input").value = "";
-  };
-  //I would have just done this line below but I would have had to mess with main to get a "test" value in
-  document.querySelector("#addPush").click();
+  const input = document.querySelector("#newTask input");
+  input.value = "testSubmit";
+
+  // simulate the click of addPush button to create a new task
+  const addPushBtn = document.querySelector("#addPush");
+  addPushBtn.click();
 
   const expectAfter =
     document.querySelector("#tasksContainer").children.length - 1;
