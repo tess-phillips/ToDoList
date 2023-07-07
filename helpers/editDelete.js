@@ -36,6 +36,10 @@ function editTask(task) {
   const editInput = taskDiv.querySelector(".editInput");
   editInput.value = text;
 
+  //shows aria
+  const editAria = taskDiv.querySelector(".editTaskDiv");
+  editAria.setAttribute("aria-hidden","false")
+
   // Show/hide parent divs
   toggleVisibility(parentDiv);
   const editTaskDiv = taskDiv.querySelector(".editTaskDiv");
@@ -54,6 +58,10 @@ function saveTask(task) {
   const updateSpan = taskDiv.querySelector("#toDo");
   updateSpan.textContent = editInput.value;
 
+  //hides aria
+  const editAria = taskDiv.querySelector(".editTaskDiv");
+  editAria.setAttribute("aria-hidden","true")
+
   // show/hides divs
   toggleVisibility(editTaskDiv);
   toggleVisibility(taskDiv);
@@ -66,6 +74,10 @@ function cancelEdit(task) {
 
   const editInput = editTaskDiv.querySelector(".editInput");
   editInput.value = "";
+
+  //hides aria
+  const editAria = taskDiv.querySelector(".editTaskDiv");
+  editAria.setAttribute("aria-hidden","true")
 
   // Show/hide divs
   toggleVisibility(editTaskDiv);
