@@ -2,6 +2,8 @@ import { createTask } from "./helpers/createElements.js";
 import { handleBtnClick } from "./helpers/editDelete.js";
 import { sortByDate } from "./helpers/sort.js";
 import { test, equal } from "./helpers/testHelpers.js"
+// import { simulateReverseTabNavigation } from "./helpers/keyboardFunctions.js";
+// import { simulateTabNavigation } from "./helpers/keyboardFunctions.js";
 
 
 // Date starts in descending order
@@ -79,3 +81,39 @@ newTaskInput.addEventListener('keydown', function(event) {
     document.getElementById('addPush').click();
   }
 });
+
+//adding event listener for the left and right arrows
+document.addEventListener('keydown', function(event) {
+    // Get all focusable elements within the document
+    const focusableElements = document.querySelectorAll(
+      'a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    
+    // Convert NodeList to Array
+    const elementsArray = Array.from(focusableElements);
+    
+    // Get the currently focused element
+    const currentElement = document.activeElement;
+    // Find the index of the current element in the array
+    const currentIndex = elementsArray.indexOf(currentElement);
+  if (event.key === "ArrowLeft") {
+    simulateReverseTabNavigation(currentIndex,elementsArray);
+  }
+  else if (event.key === "ArrowRight") {
+    simulateTabNavigation(currentIndex,elementsArray);
+  }
+});
+
+function simulateReverseTabNavigation(currentIndex,elementsArray) {  
+  // Calculate the previous element index in a circular manner
+  const previousIndex = (currentIndex - 1 + elementsArray.length) % elementsArray.length;
+  // Focus the previous element
+  elementsArray[previousIndex].focus();
+}
+
+function simulateTabNavigation(currentIndex,elementsArray) {
+  // Calculate the next element index in a circular manner
+  const nextIndex = (currentIndex + 1) % elementsArray.length;
+  // Focus the next element
+  elementsArray[nextIndex].focus();
+}
