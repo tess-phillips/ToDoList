@@ -42,3 +42,17 @@ const tasksSection = document.querySelector("#tasksSection");
 tasksSection.addEventListener("click", (event) => {
   handleBtnClick(event.target);
 });
+
+// functionality for the enter button
+const buttons = document.querySelectorAll('button');
+
+// Add eve  nt listener to each button
+buttons.forEach(button => {
+  button.addEventListener('keydown', function(event) {
+    // Check if the pressed key is Enter
+    if (event.key === 13) {
+      // Trigger a click event on the button
+      button.click();
+    }
+  });
+});
