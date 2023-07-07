@@ -8,7 +8,8 @@ export function createTask(task) {
   // clone the content of the template (returns a DocumentFragment)
   const domFragment = template.content.cloneNode(true);
 
-  const taskId = `task-${taskIdCounter}`; // Generate unique ID
+  // Generate unique ID for each <li> element and its Edit btn (labels included)
+  const taskId = `task-${taskIdCounter}`;
   domFragment.querySelector("li").setAttribute("id", taskId);
 
   const editInput = domFragment.querySelector(".editInput");
@@ -17,7 +18,7 @@ export function createTask(task) {
   editInput.setAttribute("id", `editInput-${taskIdCounter}`);
   editLabel.setAttribute("for", `editInput-${taskIdCounter}`);
 
-  // add content into the span (<li> element)
+  // add content into the (<li> element) span
   domFragment.querySelector("#toDo").textContent = task;
 
   //adds date to task
