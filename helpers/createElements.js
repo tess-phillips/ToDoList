@@ -11,6 +11,12 @@ export function createTask(task) {
   const taskId = `task-${taskIdCounter}`; // Generate unique ID
   domFragment.querySelector("li").setAttribute("id", taskId);
 
+  const editInput = domFragment.querySelector(".editInput");
+  const editLabel = domFragment.querySelector("label[for='editInput']");
+
+  editInput.setAttribute("id", `editInput-${taskIdCounter}`);
+  editLabel.setAttribute("for", `editInput-${taskIdCounter}`);
+
   // add content into the span (<li> element)
   domFragment.querySelector("#toDo").textContent = task;
 

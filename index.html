@@ -16,7 +16,9 @@
             aria-label="Enter a new task"
           />
           <button id="addPush" aria-label="Add task">Add</button>
-          <button id="sortPush" aria-label="Sort tasks by date created">SortByDateCreated</button>
+          <button id="sortPush" aria-label="Sort tasks by date created">
+            SortByDateCreated
+          </button>
         </div>
       </section>
       <!-- This is where the tasks that are made in JS go -->
@@ -26,28 +28,34 @@
           <template id="taskTemplate">
             <li id="task" class="listElement">
               <div class="taskDiv">
-                <input 
-                  type="checkbox" 
-                  name="markDone" 
-                  class="checkbox" 
-                  aria-label="Mark task as done"  
-                  />
+                <input
+                  type="checkbox"
+                  name="markDone"
+                  class="checkbox"
+                  aria-label="Mark task as done"
+                />
                 <span id="toDo"></span>
                 <button class="btn editBtn" aria-label="Edit task">Edit</button>
-                <button class="btn deleteBtn" aria-label="Delete task">Delete</button>
+                <button class="btn deleteBtn" aria-label="Delete task">
+                  Delete
+                </button>
               </div>
-              <div class="editTaskDiv" style="display: none" > 
+              <div class="editTaskDiv" style="display: none">
                 <!-- removed aria-hidden="true" from above as it was throwing errors -->
                 <label for="editInput">Edit Task:</label>
-                <input 
-                  type="text" 
-                  class="editInput" 
+                <input
+                  type="text"
+                  class="editInput"
                   id="editInput"
                   name="editInput"
                   aria-label="Edit the task"
                 />
-                <button class="btn saveBtn" aria-label="Save edited task">Save</button>
-                <button class="btn cancelBtn" aria-label="Cancel editing task">Cancel</button>
+                <button class="btn saveBtn" aria-label="Save edited task">
+                  Save
+                </button>
+                <button class="btn cancelBtn" aria-label="Cancel editing task">
+                  Cancel
+                </button>
               </div>
             </li>
           </template>
