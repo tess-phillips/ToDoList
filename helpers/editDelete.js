@@ -63,8 +63,8 @@ function saveTask(task) {
   toggleVisibility(taskDiv);
 
   //hides aria
-  const editAria = taskDiv.querySelector(".editTaskDiv");
-  editAria.setAttribute("aria-hidden","true")
+  // const editAria = taskDiv.querySelector(".editTaskDiv");
+  // editAria.setAttribute("aria-hidden","true")
 }
 
 function cancelEdit(task) {
@@ -80,8 +80,8 @@ function cancelEdit(task) {
   toggleVisibility(taskDiv);
 
   //hides aria
-  const editAria = taskDiv.querySelector(".editTaskDiv");
-  editAria.setAttribute("aria-hidden","true")
+  // const editAria = taskDiv.querySelector(".editTaskDiv");
+  // editAria.setAttribute("aria-hidden","true")
 }
 
 function toggleVisibility(div) {

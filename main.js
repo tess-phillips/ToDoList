@@ -43,6 +43,19 @@ tasksSection.addEventListener("click", (event) => {
   handleBtnClick(event.target);
 });
 
+// this should call the saveBtn when any key is pressed but it isn't working at the moment
+tasksSection.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    const editInput = event.target.closest(".editInput");
+    if (editInput) {
+      const saveBtn = editInput.parentNode.querySelector(".saveBtn");
+      if (saveBtn) {
+        handleBtnClick(saveBtn);
+      }
+    }
+  }
+});
+
 
 // functionality for the enter button when using tab to navigate the page
 const buttons = document.querySelectorAll('button');
