@@ -43,16 +43,43 @@ tasksSection.addEventListener("click", (event) => {
   handleBtnClick(event.target);
 });
 
-// functionality for the enter button
-const buttons = document.querySelectorAll('button');
 
-// Add eve  nt listener to each button
-buttons.forEach(button => {
-  button.addEventListener('keydown', function(event) {
-    // Check if the pressed key is Enter
-    if (event.key === 13) {
-      // Trigger a click event on the button
-      button.click();
-    }
-  });
-});
+// functionality for the enter button when using tab to navigate the page
+// const buttons = document.querySelectorAll('button');
+// // Add eve  nt listener to each button
+// buttons.forEach(button => {
+//   button.addEventListener('keydown', function(event) {
+//     // Check if the pressed key is Enter
+//     if (event.key === 13) {
+//       // Trigger a click event on the button
+//       button.click();
+//     }
+//   });
+// });
+
+//functionlity for the enter button when used on a text input
+// Get the "newTaskInput" and "editInput" elements
+// const newTaskInput = document.getElementById('newTaskInput');
+// const editInputs = document.querySelectorAll('.editInput');
+
+// Add event listener to "newTaskInput" for Enter key
+// newTaskInput.addEventListener('keydown', function(event) {
+//   if (event.key === 'Enter') {
+//     // Trigger a click event on the "addPush" button
+//     document.getElementById('addPush').click();
+//   }
+// });
+
+// // Add event listener to each "editInput" for Enter key
+// editInputs.forEach(editInput => {
+//   editInput.addEventListener('keydown', function(event) {
+//     if (event.key === 'Enter') {
+//       // Find the corresponding "saveBtn" for the "editInput"
+//       const saveBtn = editInput.parentNode.querySelector('.saveBtn');
+//       if (saveBtn) {
+//         // Trigger a click event on the "saveBtn" button
+//         saveBtn.click();
+//       }
+//     }
+//   });
+// });
