@@ -14,7 +14,8 @@ test("Submitting a new task adds it to the list", () => {
 
 test("Submitting a new task adds it to the list (simulating button push)", () => {
   // the number of tasks in the #taskContainer is the number of children - 1
-  const expectBefore = document.querySelector("#tasksContainer").children.length - 1;
+  const expectBefore =
+    document.querySelector("#tasksContainer").children.length - 1;
 
   const input = document.querySelector("#newTask input");
   input.value = "testSubmit";
@@ -31,7 +32,7 @@ test("Submitting a new task adds it to the list (simulating button push)", () =>
   // equal(expectAfter - expetBefore, 1)
   equal(expectBefore + 1, expectAfter);
 
-  document.querySelector("#task").remove();
+  document.querySelector("li").remove();
 });
 
 test("Deleting a task from list", () => {
@@ -89,7 +90,7 @@ test("Ticking off an item", () => {
 //   createTask('Test 1')
 //   createTask('Test 2')
 //   document.querySelector('#sortPush').click()
-//   document.querySelectorAll("#task").remove()
+//   document.querySelectorAll("li").remove()
 
 //   console.log(document.querySelector("#tasksContainer"))
 

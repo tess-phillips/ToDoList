@@ -33,7 +33,7 @@ function editTask(task) {
   const span = taskDiv.querySelector("#toDo");
   let text = span.textContent;
 
-  const editInput = taskDiv.querySelector("#editInput");
+  const editInput = taskDiv.querySelector(".editInput");
   editInput.value = text;
 
   // Show/hide parent divs
@@ -50,7 +50,7 @@ function saveTask(task) {
   const taskDiv = taskContainer.querySelector(".taskDiv");
 
   // get value/text from the new input and update the span text content
-  const editInput = editTaskDiv.querySelector("#editInput");
+  const editInput = editTaskDiv.querySelector(".editInput");
   const updateSpan = taskDiv.querySelector("#toDo");
   updateSpan.textContent = editInput.value;
 
@@ -64,7 +64,7 @@ function cancelEdit(task) {
   const taskContainer = editTaskDiv.parentNode;
   const taskDiv = taskContainer.querySelector(".taskDiv");
 
-  const editInput = editTaskDiv.querySelector("#editInput");
+  const editInput = editTaskDiv.querySelector(".editInput");
   editInput.value = "";
 
   // Show/hide divs

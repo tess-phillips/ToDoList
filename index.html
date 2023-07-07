@@ -7,7 +7,11 @@
       <!-- Input, Add, Sort buttons -->
       <section id="inputSection">
         <div id="newtask">
-          <input type="text" placeholder="Task to be done.." />
+          <input
+            type="text"
+            name="newTaskInput"
+            placeholder="Task to be done.."
+          />
           <button id="addPush">Add</button>
           <button id="sortPush">SortByDateCreated</button>
         </div>
@@ -21,13 +25,13 @@
               <div class="taskDiv">
                 <input type="checkbox" name="markDone" class="checkbox" />
                 <span id="toDo"></span>
-                <button id="editBtn" class="btn editBtn">Edit</button>
-                <button id="deleteBtn" class="btn deleteBtn">Delete</button>
+                <button class="btn editBtn">Edit</button>
+                <button class="btn deleteBtn">Delete</button>
               </div>
               <div class="editTaskDiv" style="display: none">
-                <input type="text" id="editInput" class="editInput" />
-                <button id="saveBtn" class="btn saveBtn">Save</button>
-                <button id="cancelBtn" class="btn cancelBtn">Cancel</button>
+                <input type="text" class="editInput" name="editInput" />
+                <button class="btn saveBtn">Save</button>
+                <button class="btn cancelBtn">Cancel</button>
               </div>
             </li>
           </template>
