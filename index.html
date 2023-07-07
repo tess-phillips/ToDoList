@@ -7,10 +7,12 @@
       <!-- Input, Add, Sort buttons -->
       <section id="inputSection">
         <div id="newtask">
+          <label for="newTaskInput">New Task:</label>
           <input
             type="text"
             name="newTaskInput"
             placeholder="Task to be done.."
+            id="newTaskInput"
           />
           <button id="addPush">Add</button>
           <button id="sortPush">SortByDateCreated</button>
@@ -29,7 +31,13 @@
                 <button class="btn deleteBtn">Delete</button>
               </div>
               <div class="editTaskDiv" style="display: none">
-                <input type="text" class="editInput" name="editInput" />
+                <label for="editInput">Edit Task:</label>
+                <input 
+                  type="text" 
+                  class="editInput" 
+                  id = "editInput"
+                  name="editInput" 
+                />
                 <button class="btn saveBtn">Save</button>
                 <button class="btn cancelBtn">Cancel</button>
               </div>
