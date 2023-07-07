@@ -59,7 +59,6 @@ buttons.forEach(button => {
 
 //functionlity for the enter button when used on a text input
 const newTaskInput = document.getElementById('newTaskInput');
-const editInputs = document.querySelectorAll('.editInput');
 
 // Add event listener to "newTaskInput" for Enter key
 newTaskInput.addEventListener('keydown', function(event) {
@@ -67,21 +66,3 @@ newTaskInput.addEventListener('keydown', function(event) {
     document.getElementById('addPush').click();
   }
 });
-
-// Add event listener to each "editInput" for Enter key
-// editInputs.forEach(editInput => {
-//   editInput.addEventListener('keydown', function(event) {
-//     if (event.key === 'Enter') {
-//       // Find the closest parent element that contains both "editInput" and "saveBtn"
-//       const parentElement = editInput.closest('.listElement');
-//       if (parentElement) {
-//         // Find the "saveBtn" within the parent element
-//         const saveBtn = parentElement.querySelector('.saveBtn');
-//         if (saveBtn) {
-//           // Trigger a click event on the "saveBtn" button
-//           saveBtn.click();
-//         }
-//       }
-//     }
-//   });
-// });
