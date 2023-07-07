@@ -79,9 +79,9 @@ function cancelEdit(task) {
   toggleVisibility(editTaskDiv);
   toggleVisibility(taskDiv);
 
-    //hides aria
-    const editAria = taskDiv.querySelector(".editTaskDiv");
-    editAria.setAttribute("aria-hidden","true")
+  //hides aria
+  const editAria = taskDiv.querySelector(".editTaskDiv");
+  editAria.setAttribute("aria-hidden","true")
 }
 
 function toggleVisibility(div) {
