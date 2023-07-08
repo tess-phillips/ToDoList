@@ -1,6 +1,9 @@
 import { createTask } from "./createElements.js";
 
 export function handleBtnClick(btn) {
+  if (btn.className === "checkbox") {
+    tickOff(btn);
+  }
   // get the second class element for each button because id must be unique
   switch (btn.classList[1]) {
     case "deleteBtn":
@@ -38,7 +41,7 @@ function editTask(task) {
 
   //shows aria
   const editAria = taskDiv.querySelector(".editTaskDiv");
-  editAria.setAttribute("aria-hidden","false")
+  editAria.setAttribute("aria-hidden", "false");
 
   // Show/hide parent divs
   toggleVisibility(parentDiv);
@@ -67,6 +70,7 @@ function saveTask(task) {
   // editAria.setAttribute("aria-hidden","true")
 }
 
+// cancel the changes
 function cancelEdit(task) {
   const editTaskDiv = task.parentNode;
   const taskContainer = editTaskDiv.parentNode;
@@ -82,6 +86,22 @@ function cancelEdit(task) {
   //hides aria
   // const editAria = taskDiv.querySelector(".editTaskDiv");
   // editAria.setAttribute("aria-hidden","true")
+}
+
+// function to mark a task once completed
+function tickOff(task) {
+  const taskCompleted = task.parentNode.querySelector("#toDo");
+  toggleMark(taskCompleted);
+}
+
+function toggleMark(div) {
+  if (div.style.textDecoration !== "line-through") {
+    div.style.textDecoration = "line-through";
+    div.setAttribute("class", "completed");
+  } else {
+    div.style.textDecoration = "";
+    div.removeAttribute("class", "completed");
+  }
 }
 
 function toggleVisibility(div) {
