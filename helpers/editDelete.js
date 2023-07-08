@@ -36,6 +36,10 @@ function editTask(task) {
   const editInput = taskDiv.querySelector(".editInput");
   editInput.value = text;
 
+  //shows aria
+  const editAria = taskDiv.querySelector(".editTaskDiv");
+  editAria.setAttribute("aria-hidden","false")
+
   // Show/hide parent divs
   toggleVisibility(parentDiv);
   const editTaskDiv = taskDiv.querySelector(".editTaskDiv");
@@ -57,6 +61,10 @@ function saveTask(task) {
   // show/hides divs
   toggleVisibility(editTaskDiv);
   toggleVisibility(taskDiv);
+
+  //hides aria
+  // const editAria = taskDiv.querySelector(".editTaskDiv");
+  // editAria.setAttribute("aria-hidden","true")
 }
 
 function cancelEdit(task) {
@@ -70,6 +78,10 @@ function cancelEdit(task) {
   // Show/hide divs
   toggleVisibility(editTaskDiv);
   toggleVisibility(taskDiv);
+
+  //hides aria
+  // const editAria = taskDiv.querySelector(".editTaskDiv");
+  // editAria.setAttribute("aria-hidden","true")
 }
 
 function toggleVisibility(div) {

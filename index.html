@@ -7,13 +7,18 @@
       <!-- Input, Add, Sort buttons -->
       <section id="inputSection">
         <div id="newtask">
+          <label for="newTaskInput">Enter New Task:</label>
           <input
             type="text"
             name="newTaskInput"
             placeholder="Task to be done.."
+            id="newTaskInput"
+            aria-label="Enter a new task"
           />
-          <button id="addPush">Add</button>
-          <button id="sortPush">SortByDateCreated</button>
+          <button id="addPush" aria-label="Add task">Add</button>
+          <button id="sortPush" aria-label="Sort tasks by date created">
+            SortByDateCreated
+          </button>
         </div>
       </section>
       <!-- This is where the tasks that are made in JS go -->
@@ -23,15 +28,34 @@
           <template id="taskTemplate">
             <li id="task" class="listElement">
               <div class="taskDiv">
-                <input type="checkbox" name="markDone" class="checkbox" />
+                <input
+                  type="checkbox"
+                  name="markDone"
+                  class="checkbox"
+                  aria-label="Mark task as done"
+                />
                 <span id="toDo"></span>
-                <button class="btn editBtn">Edit</button>
-                <button class="btn deleteBtn">Delete</button>
+                <button class="btn editBtn" aria-label="Edit task">Edit</button>
+                <button class="btn deleteBtn" aria-label="Delete task">
+                  Delete
+                </button>
               </div>
               <div class="editTaskDiv" style="display: none">
-                <input type="text" class="editInput" name="editInput" />
-                <button class="btn saveBtn">Save</button>
-                <button class="btn cancelBtn">Cancel</button>
+                <!-- removed aria-hidden="true" from above as it was throwing errors -->
+                <label for="editInput">Edit Task:</label>
+                <input
+                  type="text"
+                  class="editInput"
+                  id="editInput"
+                  name="editInput"
+                  aria-label="Edit the task"
+                />
+                <button class="btn saveBtn" aria-label="Save edited task">
+                  Save
+                </button>
+                <button class="btn cancelBtn" aria-label="Cancel editing task">
+                  Cancel
+                </button>
               </div>
             </li>
           </template>
