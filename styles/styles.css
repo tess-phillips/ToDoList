@@ -1,0 +1,37 @@
+html,
+body {
+  box-sizing: border-box;
+  background-color: #fedeff;
+  font-size: 1.3em;
+}
+body * {
+  font-size: 1.3em;
+}
+header {
+  /* grid-row: 1; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 4em;
+}
+header h1 {
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 300px;
+}
+.grid {
+  display: grid;
+}
+.body {
+  grid-template-rows: auto 1fr 100px;
+  margin: 1em;
+}
+.main {
+  grid-template-rows: 100px 1fr;
+  /* grid-template-columns: 1fr 1fr; */
+  font-size: 16px;
+}

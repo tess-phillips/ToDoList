@@ -1,9 +1,20 @@
 <html lang="en">
   <head>
     <title>To Do List</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Inter:wght@300&family=Montserrat&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <main>
+  <body class="grid body">
+    <header>
+      <img src="pics/list-coloured.png" alt="icon of a list" />
+      <h1>ToDo List</h1>
+    </header>
+    <main class="grid main">
       <!-- Input, Add, Sort buttons -->
       <section id="inputSection">
         <div id="newtask">
@@ -62,7 +73,10 @@
         </ul>
       </section>
     </main>
-    <script type="module" src="main.js"></script>
-    <script type="module" src="test.js"></script>
+    <footer>
+      Projects by <a href="https://github.com/tess-phillips">Tess Phillips</a> &
+      <a href="https://github.com/benante">Tommaso Orlandi</a>
+      Icon by <a href="https://www.flaticon.com/">Flaticon</a>
+    </footer>
   </body>
 </html>
