@@ -31,7 +31,7 @@ Ensure your app is accessible to as many different users as possible
 ## Installation <a name="installatoin"></a>
 
 Clone the repository: `git clone https://github.com/tess-phillips/ToDoList.git`
-Navigate to the project directory: `cd to-do-list-tracker`
+Navigate to the project directory: `cd ToDoList`
 Open the index.html file in a web browser.
 Use the application to add, track, complete, and delete tasks in the to-do list.
 Review the automated tests in the test.js file to ensure the functionality is covered.
