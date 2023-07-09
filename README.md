@@ -40,6 +40,20 @@ To run it locally:
 
 ## Usage <a name="usage"></a>
 
+The **To Do List** project is built using modular JavaScript files that work together to provide a comprehensive task management solution. The project structure promotes code organization, reusability, and testability.
+
+### File Structure Overview:
+
+- **createElements.js**: This file handles the creation of new tasks by cloning an HTML template and assigning unique IDs and attributes
+- **editDelete.js**: Contains functions for editing and deleting tasks, allowing users to modify task content and mark tasks as completed
+- **keyboardFunctions**.js: Provides utility functions for simulating keyboard navigation, enhancing accessibility for motor-impaired users
+- **sort.js** and **sortCompleted.js**: These files offer functions for sorting tasks by date and completion status, respectively
+- **testHelpers.js**: Contains helpful functions for writing automated tests, ensuring the reliability of the application's functionality
+- **main.js**: Serves as the entry point, handling user interactions, such as adding tasks, sorting, and saving edits
+- **test.js**: Includes automated tests covering the main user stories and additional functionality
+
+The modular design enables independent development and maintenance of each module, enhancing code readability and facilitating future enhancements. The project also includes a suite of automated tests to validate the application's behavior and ensure its robustness
+
 ## Learning Outcomes <a name="outcomes"></a>
 
 ### Testing
