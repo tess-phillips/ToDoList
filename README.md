@@ -32,11 +32,13 @@ As a busy person I want to:
 
 To run it locally:
 
-1 Clone the repository: `git clone https://github.com/tess-phillips/ToDoList.git`
-2 Navigate to the project directory: `cd ToDoList`
-3 Open the index.html file in a web browser.
-4 Use the application to add, track, complete, and delete tasks in the to-do list.
-5 Review the automated tests in the test.js file to ensure the functionality is covered.
+1. Clone the repository: `git clone https://github.com/tess-phillips/ToDoList.git`
+2. Navigate to the project directory: `cd ToDoList`
+3. Open the index.html file in a web browser.
+4. Use the application to add, track, complete, and delete tasks in the to-do list.
+5. Review the automated tests in the test.js file to ensure the functionality is covered.
+
+## Usage <a name="usage"></a>
 
 ## Learning Outcomes <a name="outcomes"></a>
 
@@ -54,14 +56,14 @@ To run it locally:
 
 ### CSS
 
-Use CSS grid to create complex layouts
-Use CSS grid to make layouts that adapt to the viewport size
+- Use CSS grid to create complex layouts
+- Use CSS grid to make layouts that adapt to the viewport size
 
-### Credits <a name="credits"></a>
+## Credits <a name="credits"></a>
 
 This project was created and maintained by [Tess Phillips](https://github.com/tess-phillips) and [Tommaso Orlandi](https://github.com/benante). We both contributed equally to the development of this project.
 <a name=""></a>
 
-### License <a name="license"></a>
+## License <a name="license"></a>
 
 The ToDo List website is open source and released under the [MIT License](https://mit-license.org/). Feel free to use, modify, and distribute the code as needed.
