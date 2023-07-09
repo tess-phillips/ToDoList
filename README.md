@@ -23,18 +23,18 @@ As a busy person I want to:
 
 ## Acceptance Criteria <a name="criteria"></a>
 
-A working to-do list
-Tests for (at least) each user story
-A responsive, mobile-first design
-Ensure your app is accessible to as many different users as possible
+- A working to-do list
+- Tests for (at least) each user story
+- A responsive, mobile-first design
+- Ensure your app is accessible to as many different users as possible
 
 ## Installation <a name="installatoin"></a>
 
-Clone the repository: `git clone https://github.com/tess-phillips/ToDoList.git`
-Navigate to the project directory: `cd ToDoList`
-Open the index.html file in a web browser.
-Use the application to add, track, complete, and delete tasks in the to-do list.
-Review the automated tests in the test.js file to ensure the functionality is covered.
+1 Clone the repository: `git clone https://github.com/tess-phillips/ToDoList.git`
+2 Navigate to the project directory: `cd ToDoList`
+3 Open the index.html file in a web browser.
+4 Use the application to add, track, complete, and delete tasks in the to-do list.
+5 Review the automated tests in the test.js file to ensure the functionality is covered.
 
 ## Learning Outcomes <a name="outcomes"></a>
 
