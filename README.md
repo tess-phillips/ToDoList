@@ -34,9 +34,9 @@ To run it locally:
 
 1. Clone the repository: `git clone https://github.com/tess-phillips/ToDoList.git`
 2. Navigate to the project directory: `cd ToDoList`
-3. Open the index.html file in a web browser.
-4. Use the application to add, track, complete, and delete tasks in the to-do list.
-5. Review the automated tests in the test.js file to ensure the functionality is covered.
+3. Open the index.html file in a web browser
+4. Use the application to add, track, complete, and delete tasks in the to-do list
+5. Review the automated tests in the test.js file to ensure the functionality is covered
 
 ## Usage <a name="usage"></a>
 
@@ -52,7 +52,7 @@ The **To Do List** project is built using modular JavaScript files that work tog
 - **main.js**: Serves as the entry point, handling user interactions, such as adding tasks, sorting, and saving edits
 - **test.js**: Includes automated tests covering the main user stories and additional functionality
 
-The modular design enables independent development and maintenance of each module, enhancing code readability and facilitating future enhancements. The project also includes a suite of automated tests to validate the application's behavior and ensure its robustness
+The modular design enables independent development and maintenance of each module, enhancing code readability and facilitating future enhancements. The project also includes a suite of automated tests to validate the application's behavior and ensure its robustness.
 
 ## Learning Outcomes <a name="outcomes"></a>
 
