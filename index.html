@@ -10,15 +10,15 @@
     />
   </head>
   <body class="grid body">
-    <header>
+    <header class="flex-centered-column lrg-font">
       <img src="pics/list-coloured.png" alt="icon of a list" />
       <h1>ToDo List</h1>
     </header>
     <main class="grid main">
       <!-- Input, Add, Sort buttons -->
       <section id="inputSection">
-        <div id="newtask">
-          <label for="newTaskInput">Enter New Task:</label>
+        <div id="newtask" class="flex-centered-column">
+          <label for="newTaskInput"> <h2>Enter New Task:</h2></label>
           <input
             type="text"
             name="newTaskInput"
@@ -26,11 +26,19 @@
             id="newTaskInput"
             aria-label="Enter a new task"
           />
-          <button id="addPush" aria-label="Add task">Add</button>
-          <button id="sortPush" aria-label="Sort tasks by date created">
+          <button class="btn" id="addPush" aria-label="Add task">Add</button>
+          <button
+            class="btn"
+            id="sortPush"
+            aria-label="Sort tasks by date created"
+          >
             SortByDateCreated
           </button>
-          <button id="sortCompletedPush" aria-label="Sort tasks by completed">
+          <button
+            class="btn"
+            id="sortCompletedPush"
+            aria-label="Sort tasks by completed"
+          >
             SortByCompleted
           </button>
         </div>
@@ -79,9 +87,12 @@
       <script type="module" src="test.js"></script>
     </main>
     <footer>
-      Projects by <a href="https://github.com/tess-phillips">Tess Phillips</a> &
-      <a href="https://github.com/benante">Tommaso Orlandi</a>
-      Icon by <a href="https://www.flaticon.com/">Flaticon</a>
+      <div>
+        Project by
+        <a href="https://github.com/tess-phillips">Tess Phillips</a> &
+        <a href="https://github.com/benante">Tommaso Orlandi</a>
+      </div>
+      <div>Icon by <a href="https://www.flaticon.com/">Flaticon</a></div>
     </footer>
   </body>
 </html>

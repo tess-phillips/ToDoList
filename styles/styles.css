@@ -2,36 +2,52 @@ html,
 body {
   box-sizing: border-box;
   background-color: #fedeff;
-  font-size: 1.3em;
-}
-body * {
-  font-size: 1.3em;
 }
 header {
-  /* grid-row: 1; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 4em;
+  margin-top: 2em;
 }
 header h1 {
   margin: 0;
 }
+h2 {
+  margin: 0;
+}
 ul {
   list-style: none;
+  padding-left: 0;
+  font-size: 4rem;
 }
 img {
   max-width: 300px;
+}
+.flex-centered-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .grid {
   display: grid;
 }
 .body {
   grid-template-rows: auto 1fr 100px;
-  margin: 1em;
 }
 .main {
-  grid-template-rows: 100px 1fr;
-  /* grid-template-columns: 1fr 1fr; */
-  font-size: 16px;
+  grid-template-rows: auto 1fr;
+}
+
+footer {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+
+.lrg-font {
+  font-size: 4em;
+}
+.md-font {
+  font-size: 2.5em;
+}
+#newtask > * {
+  margin-top: 10px;
+  font-size: 3em;
 }
