@@ -1,6 +1,7 @@
 import { createTask } from "./helpers/createElements.js";
 import { handleBtnClick } from "./helpers/editDelete.js";
 import { sortByDate } from "./helpers/sort.js";
+import { sortByCompleted } from "./helpers/sortCompleted.js";
 import { test, equal } from "./helpers/testHelpers.js"
 import { simulateReverseTabNavigation } from "./helpers/keyboardFunctions.js";
 import { simulateTabNavigation } from "./helpers/keyboardFunctions.js";
@@ -21,6 +22,12 @@ document.querySelector("#sortPush").onclick = function () {
   tasksBlock.innerHTML = ""; // Clear existing tasks
   sortedTasks.forEach((task) => tasksBlock.appendChild(task));
   isSortingAscending = !isSortingAscending;
+};
+
+document.querySelector("#sortCompletedPush").onclick = function () {
+  const sortedTasks = sortByCompleted(tasksBlock);
+  tasksBlock.innerHTML = ""; // Clear existing tasks
+  sortedTasks.forEach((task) => tasksBlock.appendChild(task));
 };
 
 // This defines what happens when the add button is clicked
