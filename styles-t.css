@@ -1,126 +1,118 @@
-:root{
-    /* --col1: #846C5B; */
-    --col2: #332E3C;
-    --col5:grey;
-    /* --col4:#26C485; */
-}
-
 /* General styles */
 body {
     font-family: Arial, sans-serif;
     background-color: lightgray;
     margin: 0;
     padding: 0;
-  }
+}
   
-  main {
-    max-width: 600px;
+main {
+    max-width: 700px;
     margin: 0 auto;
     padding: 20px;
-  }
+}
   
-  h1 {
+h1 {
     text-align: center;
-    color: var(--col2);
-  }
+}
   
-  /* Input section styles */
-  label{
-    color: var(--col2);
+/* Input section styles */
+label{
     padding: 10px;
-  }
-  #inputSection {
+}
+
+#inputSection {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-  }
+}
   
-  #newtask {
+#newtask {
     display: flex;
     align-items: center;
-  }
+    flex-wrap: wrap;
+}
   
-  #newTaskInput {
+#newTaskInput {
     flex-grow: 1;
     padding: 5px;
     margin-right: 10px;
     margin-right: 10px;
-    border: 1px solid var(--col2);
-  }
+    border: 1px solid;
+}
   
-  button {
+button {
     padding: 10px 15px;
     border: none;
-    background-color: var(--col2);
+    background-color: black;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
+}
   
-  button:hover {
-    background-color: var(--col5);
-  }
+button:hover {
+    background-color: grey;
+}
   
-  /* Tasks section styles */
-  #tasksContainer {
+/* Tasks section styles */
+#tasksContainer {
     list-style: none;
     padding: 0;
-  }
+}
   
-  .listElement {
+.listElement {
     background-color: #fff;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
-  }
+}
   
-  .listElement:hover {
+.listElement:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+}
   
-  .taskDiv {
+.taskDiv {
     display: flex;
     align-items: center;
-  }
+}
   
-  .checkbox {
+.checkbox {
     margin-right: 10px;
-  }
+}
   
-  .editBtn,
-  .deleteBtn {
+.editBtn,
+.deleteBtn {
     padding: 5px 10px;
     margin-left: 10px;
-    background-color: var(--col5);
+    background-color: grey;
     color: #fff;
     /* border: none; */
     /* border-radius: 3px; */
     transition: background-color 0.3s ease;
-  }
+}
   
-  .editBtn:hover,
-  .deleteBtn:hover {
-    background-color: var(--col5);
-  }
+.editBtn:hover,
+.deleteBtn:hover {
+    background-color: black;
+}
   
-  .editTaskDiv {
+.editTaskDiv {
     margin-top: 10px;
-  }
+}
   
-  /* Transitions */
-  #tasksSection li {
+/* Transitions */
+#tasksSection li {
     transition: transform 0.3s ease, opacity 0.3s ease;
-  }
+}
   
-  #tasksSection li.slide-up {
+#tasksSection li.slide-up {
     transform: translateY(-20px);
     opacity: 0;
-  }
+}
   
-  #tasksSection li.slide-down {
+#tasksSection li.slide-down {
     transform: translateY(20px);
     opacity: 0;
-  }
-  
+}
