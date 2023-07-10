@@ -83,7 +83,7 @@ button:hover {
 .taskDiv {
     display: grid; /* Change to grid */
     align-items: center;
-    grid-template-columns: auto 1fr auto; /* Add grid-template-columns */
+    grid-template-columns: auto 1fr auto auto;
 }
 
 .checkbox {
@@ -98,6 +98,8 @@ button:hover {
     color: #fff;
     transition: background-color 0.3s ease;
 }
+
+/* .editBtn */
 
 .editBtn:hover,
 .deleteBtn:hover {
