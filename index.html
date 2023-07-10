@@ -10,14 +10,14 @@
     />
   </head>
   <body class="grid body">
-    <header class="flex-centered-column lrg-font">
+    <header class="flex-centered columns lrg-font">
       <img src="pics/list-coloured.png" alt="icon of a list" />
       <h1>ToDo List</h1>
     </header>
     <main class="grid main">
       <!-- Input, Add, Sort buttons -->
       <section id="inputSection">
-        <div id="newtask" class="flex-centered-column">
+        <div id="newtask" class="flex-centered columns">
           <label for="newTaskInput"> <h2>Enter New Task:</h2></label>
           <input
             type="text"
@@ -49,7 +49,7 @@
           <!-- single task template -->
           <template id="taskTemplate">
             <li id="task" class="listElement">
-              <div class="taskDiv">
+              <div class="taskDiv flex-centered rows">
                 <input
                   type="checkbox"
                   name="markDone"
@@ -62,7 +62,7 @@
                   Delete
                 </button>
               </div>
-              <div class="editTaskDiv" style="display: none">
+              <div class="editTaskDiv fle" style="display: none">
                 <!-- removed aria-hidden="true" from above as it was throwing errors -->
                 <label for="editInput">Edit Task:</label>
                 <input
