@@ -31,13 +31,11 @@ label {
 #newtask {
     display: grid; /* Change to grid */
     align-items: center;
-    flex-wrap: wrap;
     grid-template-columns: 1fr; /* Add grid-template-columns */
     gap: 10px; /* Add gap between grid items */
 }
 
 #newTaskInput {
-    flex-grow: 1;
     padding: 5px;
     margin-right: 10px;
     margin-right: 10px; /* Remove duplicate property */
