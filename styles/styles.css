@@ -1,0 +1,122 @@
+/* HTML TAGS */
+
+html,
+body {
+  box-sizing: border-box;
+  background-color: #fedeff;
+}
+header {
+  margin-top: 2em;
+}
+header h1 {
+  margin: 0;
+}
+footer {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+h2 {
+  margin: 0;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+img {
+  max-width: 300px;
+}
+
+/* DISPLAY: GRID & FLEX */
+
+.flex-centered {
+  display: flex;
+  align-items: center;
+}
+
+.columns {
+  flex-direction: column;
+}
+.rows {
+  flex-direction: row;
+}
+
+.grid {
+  display: grid;
+}
+.body {
+  grid-template-rows: auto 1fr 100px;
+}
+.main {
+  grid-template-rows: auto 1fr;
+}
+
+/* TASKS ELEMENTS */
+#newtask > * {
+  margin-top: 10px;
+  font-size: 3em;
+}
+.listElement {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+.listElement:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* BUTTONS */
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: grey;
+}
+.editBtn,
+.deleteBtn {
+  padding: 5px 10px;
+  margin-left: 10px;
+  background-color: grey;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.editBtn:hover,
+.deleteBtn:hover {
+  background-color: black;
+}
+
+/* FONTS */
+
+.lrg-font {
+  font-size: 4em;
+}
+.md-font {
+  font-size: 2.5em;
+}
+
+/* TRANSITIONS */
+#tasksSection li {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#tasksSection li.slide-up {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+#tasksSection li.slide-down {
+  transform: translateY(20px);
+  opacity: 0;
+}

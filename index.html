@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles-t.css">
     <title>To Do List</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Inter:wght@300&family=Montserrat&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
@@ -14,8 +21,8 @@
       <h1>To Do List</h1>
       <!-- Input, Add, Sort buttons -->
       <section id="inputSection">
-        <div id="newtask">
-          <label for="newTaskInput">Enter New Task:</label>
+        <div id="newtask" class="flex-centered columns">
+          <label for="newTaskInput"> <h2>Enter New Task:</h2></label>
           <input
             type="text"
             name="newTaskInput"
@@ -23,11 +30,19 @@
             id="newTaskInput"
             aria-label="Enter a new task"
           />
-          <button id="addPush" aria-label="Add task">Add</button>
-          <button id="sortPush" aria-label="Sort tasks by date created">
+          <button class="btn" id="addPush" aria-label="Add task">Add</button>
+          <button
+            class="btn"
+            id="sortPush"
+            aria-label="Sort tasks by date created"
+          >
             SortByDateCreated
           </button>
-          <button id="sortCompletedPush" aria-label="Sort tasks by completed">
+          <button
+            class="btn"
+            id="sortCompletedPush"
+            aria-label="Sort tasks by completed"
+          >
             SortByCompleted
           </button>
         </div>
@@ -38,7 +53,7 @@
           <!-- single task template -->
           <template id="taskTemplate">
             <li id="task" class="listElement">
-              <div class="taskDiv">
+              <div class="taskDiv flex-centered rows">
                 <input
                   type="checkbox"
                   name="markDone"
@@ -51,7 +66,7 @@
                   Delete
                 </button>
               </div>
-              <div class="editTaskDiv" style="display: none">
+              <div class="editTaskDiv fle" style="display: none">
                 <!-- removed aria-hidden="true" from above as it was throwing errors -->
                 <label for="editInput">Edit Task:</label>
                 <input
@@ -72,8 +87,16 @@
           </template>
         </ul>
       </section>
+      <script type="module" src="main.js"></script>
+      <script type="module" src="test.js"></script>
     </main>
-    <script type="module" src="main.js"></script>
-    <script type="module" src="test.js"></script>
+    <footer>
+      <div>
+        Project by
+        <a href="https://github.com/tess-phillips">Tess Phillips</a> &
+        <a href="https://github.com/benante">Tommaso Orlandi</a>
+      </div>
+      <div>Icon by <a href="https://www.flaticon.com/">Flaticon</a></div>
+    </footer>
   </body>
 </html>
