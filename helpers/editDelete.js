@@ -1,4 +1,8 @@
-import { createTask } from "./createElements.js";
+import { toggleVisibility } from "./toggleVisibility.js";
+import { tickOff } from "./checkboxHelpers.js";
+
+// This file contains functions relevant to editing or deleting a task 
+// This includes saving or cancelling the edits you make
 
 export function handleBtnClick(btn) {
   if (btn.className === "checkbox") {
@@ -20,6 +24,7 @@ export function handleBtnClick(btn) {
       break;
   }
 }
+
 // removes the task
 function deleteTask(task) {
   const item = task.parentNode.parentNode;
@@ -86,28 +91,4 @@ function cancelEdit(task) {
   //hides aria
   // const editAria = taskDiv.querySelector(".editTaskDiv");
   // editAria.setAttribute("aria-hidden","true")
-}
-
-// function to mark a task once completed
-function tickOff(task) {
-  const taskCompleted = task.parentNode.querySelector("#toDo");
-  toggleMark(taskCompleted);
-}
-
-function toggleMark(div) {
-  if (div.style.textDecoration !== "line-through") {
-    div.style.textDecoration = "line-through";
-    div.setAttribute("class", "completed");
-  } else {
-    div.style.textDecoration = "";
-    div.removeAttribute("class", "completed");
-  }
-}
-
-function toggleVisibility(div) {
-  if (div.style.display === "none") {
-    div.style.display = "block";
-  } else {
-    div.style.display = "none";
-  }
 }
