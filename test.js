@@ -17,7 +17,7 @@ test("Submitting a new task adds it to the list (simulating button push)", () =>
   const expectBefore =
     document.querySelector("#tasksContainer").children.length - 1;
 
-  const input = document.querySelector("#newTask input");
+  const input = document.querySelector("#newTaskInput");
   input.value = "testSubmit";
 
   // simulate the click of addPush button to create a new task
@@ -37,7 +37,7 @@ test("Submitting a new task adds it to the list (simulating button push)", () =>
 
 test("Deleting a task from list", () => {
   // create an input value and add it to the list
-  const input = document.querySelector("#newTask input");
+  const input = document.querySelector("#newTaskInput");
   input.value = "testDelete";
 
   // simulate the click of addPush button to create a new task
