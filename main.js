@@ -109,6 +109,9 @@ document.addEventListener('keydown', function(event) {
     simulateTabNavigation(currentIndex,elementsArray);
   }
   else if (event.key === "Enter" && currentElement.className === "checkbox"){
+    // this adds the strikethrough for the checked task
     tickOff(currentElement)
+    // this checks the box if it isn't already, otherwise it removes the check
+    currentElement.checked ^=1
   }
 });
