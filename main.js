@@ -74,17 +74,14 @@ newTaskInput.addEventListener('keydown', function(event) {
 
 //adding event listener for the left and right arrows
 document.addEventListener('keydown', function(event) {
-  // Get all focusable elements within the document
+  // Get all focusable elements within the document and converts to an array
   const focusableElements = document.querySelectorAll(
     'a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])'
   );
-  
-  // Convert NodeList to Array
   const elementsArray = Array.from(focusableElements);
   
-  // Get the currently focused element
+  // Gets the currently focused element
   const currentElement = document.activeElement;
-  // Find the index of the current element in the array
   const currentIndex = elementsArray.indexOf(currentElement);
 
   if (event.key === "ArrowLeft") {
