@@ -1,6 +1,5 @@
-import { createTask } from "./helpers/createElements.js";
+import { createTask } from "./helpers/createTask.js";
 import { test, equal } from "./helpers/testHelpers.js";
-import { handleBtnClick } from "./helpers/editDelete.js";
 
 test("Submitting a new task adds it to the list", () => {
   const expectBefore =

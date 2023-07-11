@@ -1,8 +1,7 @@
-import { createTask } from "./helpers/createElements.js";
+import { createTask } from "./helpers/createTask.js";
 import { handleBtnClick } from "./helpers/editDelete.js";
-import { sortByDate } from "./helpers/sort.js";
-import { sortByCompleted } from "./helpers/sortCompleted.js";
-import { test, equal } from "./helpers/testHelpers.js"
+import { sortByDate } from "./helpers/sortbyDate.js";
+import { sortByCompleted } from "./helpers/sortbyCompleted.js";
 import { simulateReverseTabNavigation } from "./helpers/keyboardFunctions.js";
 import { simulateTabNavigation } from "./helpers/keyboardFunctions.js";
 import { tickOff } from "./helpers/checkboxHelpers.js";
