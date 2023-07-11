@@ -68,6 +68,10 @@ button:hover {
     padding: 0;
 }
 
+span{
+    overflow-x:scroll;
+}
+
 .listElement {
     background-color: #fff;
     padding: 10px;
