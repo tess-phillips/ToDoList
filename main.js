@@ -52,16 +52,39 @@ tasksSection.addEventListener("click", (event) => {
   handleBtnClick(event.target);
 });
 
+// this should call the saveBtn when any key is pressed but it isn't working at the moment
+// tasksSection.addEventListener("keydown", function(event) {
+//   if (event.key === "Enter") {
+//     const editInput = event.target.closest(".editInput");
+//     if (editInput) {
+//       const saveBtn = editInput.parentNode.querySelector(".saveBtn");
+//       if (saveBtn) {
+//         handleBtnClick(saveBtn);
+//       }
+//     }
+//   }
+// });
+
+
 // functionality for the enter button when using tab to navigate the page
 const buttons = document.querySelectorAll('button');
 // Add event listener to each button
 buttons.forEach(button => {
+  console.log(buttons)
   button.addEventListener('keydown', function(event) {
     // Check if the pressed key is Enter
     if (event.key === 13) {
       button.click();
     }
   });
+});
+
+//functionlity for the enter button when used on a text input
+const newTaskInput = document.getElementById('newTaskInput');
+newTaskInput.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    document.getElementById('addPush').click();
+  }
 });
 
 //adding event listener for the left and right arrows
