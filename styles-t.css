@@ -95,7 +95,7 @@ span{
 }
 
 .editBtn,
-.deleteBtn {
+.deleteBtn, .saveBtn, .cancelBtn {
     padding: 5px 10px;
     margin-left: 10px;
     background-color: grey;
