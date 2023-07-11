@@ -1,6 +1,9 @@
 import { toggleVisibility } from "./toggleVisibility.js";
 import { tickOff } from "./checkboxHelpers.js";
 
+// This file contains functions relevant to editing or deleting a task 
+// This includes saving or cancelling the edits you make
+
 export function handleBtnClick(btn) {
   if (btn.className === "checkbox") {
     tickOff(btn);
