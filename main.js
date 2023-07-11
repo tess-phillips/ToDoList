@@ -109,4 +109,5 @@ document.addEventListener('keydown', function(event) {
   else if (event.key === "ArrowRight") {
     simulateTabNavigation(currentIndex,elementsArray);
   }
+  // else if (event.key === )
 });
