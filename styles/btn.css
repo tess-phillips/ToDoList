@@ -9,3 +9,12 @@ main button {
 .btn:hover {
   background-color: grey;
 }
+
+.editTaskDiv .btn,
+.taskDiv .btn {
+  padding: 10px 15px;
+}
+
+.taskDiv .btn {
+  background-color: black;
+}
