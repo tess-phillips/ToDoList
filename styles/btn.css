@@ -10,11 +10,18 @@ main button {
   background-color: grey;
 }
 
-.editTaskDiv .btn,
-.taskDiv .btn {
-  padding: 10px 15px;
+.editBtn,
+.deleteBtn,
+.saveBtn,
+.cancelBtn {
+  padding: 5px 10px;
+  margin-left: 10px;
+  background-color: grey;
+  color: #fff;
+  transition: background-color 0.3s ease;
 }
 
-.taskDiv .btn {
+.editBtn:hover,
+.deleteBtn:hover {
   background-color: black;
 }
