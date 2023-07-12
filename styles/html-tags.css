@@ -13,7 +13,7 @@ body > * {
   margin-right: auto;
 }
 main {
-  width: 100%;
+  width: 100%; /* with this property main doesn t get squeezed by grid */
   max-width: 700px;
 }
 header {
@@ -26,11 +26,7 @@ h2 {
 h2 {
   margin: 0;
 }
-/* footer {
-  display: grid;
-  justify-items: center;
-  align-content: center;
-} */
+
 li {
   margin-bottom: 10px;
 }
