@@ -7,6 +7,15 @@ body {
   min-height: 100vh;
 }
 
+/* Target all body children to be centered */
+body > * {
+  margin-left: auto;
+  margin-right: auto;
+}
+main {
+  width: 100%;
+  max-width: 700px;
+}
 header {
   margin-top: 2em;
 }
@@ -19,11 +28,12 @@ h2 {
   justify-items: center;
   align-content: center;
 } */
-
+li {
+  margin-bottom: 10px;
+}
 ul {
   list-style: none;
   padding-left: 0;
-  font-size: 4rem;
   margin-bottom: 0;
 }
 img {
