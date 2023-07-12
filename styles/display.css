@@ -1,0 +1,32 @@
+/* DISPLAY: GRID & FLEX */
+
+.flex-centered {
+  display: flex;
+  align-items: center;
+}
+
+.flex-columns {
+  flex-direction: column;
+}
+.flex-rows {
+  flex-direction: row;
+}
+
+.grid {
+  display: grid;
+}
+.grid-rows {
+  grid-template-rows: auto 1fr 100px;
+}
+.row1 {
+  grid-row: 1/2;
+}
+.row2 {
+  grid-row: 2/3;
+}
+.row3 {
+  grid-row: 3/4;
+}
+/* .main {
+  grid-template-rows: auto 1fr;
+} */
