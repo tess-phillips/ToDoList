@@ -1,4 +1,4 @@
-/* General styles */
+/* General styles
 body {
   font-family: Arial, sans-serif;
   background-color: #fedeff;
@@ -15,7 +15,7 @@ main {
 footer {
   display: grid;
   justify-items: center;
-}
+} */
 
 #imageSection {
   display: grid;
@@ -24,9 +24,9 @@ footer {
   margin-bottom: 20px;
 }
 
-h1 {
+/* h1 {
   text-align: center;
-}
+} */
 
 /* Input section styles */
 label {
