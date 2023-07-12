@@ -18,15 +18,8 @@
 .grid-rows {
   grid-template-rows: auto 1fr 100px;
 }
-/* .row1 {
-  grid-row: 1/2;
+
+.centered-content {
+  align-content: center;
+  justify-items: center;
 }
-.row2 {
-  grid-row: 2/3;
-}
-.row3 {
-  grid-row: 3/4;
-} */
-/* .main {
-  grid-template-rows: auto 1fr;
-} */
