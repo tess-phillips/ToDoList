@@ -1,0 +1,26 @@
+/* DISPLAY: GRID & FLEX */
+
+.flex-centered {
+  display: flex;
+  align-items: center;
+}
+
+.flex-columns {
+  flex-direction: column;
+}
+.flex-rows {
+  flex-direction: row;
+}
+
+.grid {
+  display: grid;
+  gap: 5px;
+}
+.grid-rows {
+  grid-template-rows: auto 1fr 100px;
+}
+
+.centered-content {
+  align-content: center;
+  justify-items: center;
+}

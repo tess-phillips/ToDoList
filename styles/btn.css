@@ -1,0 +1,27 @@
+main button {
+  border: none;
+  background-color: #a51080;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: grey;
+}
+
+.editBtn,
+.deleteBtn,
+.saveBtn,
+.cancelBtn {
+  padding: 5px 10px;
+  margin-left: 10px;
+  background-color: grey;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.editBtn:hover,
+.deleteBtn:hover {
+  background-color: black;
+}

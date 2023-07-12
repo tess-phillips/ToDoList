@@ -1,0 +1,36 @@
+#newtask > * {
+  padding: 10px 15px;
+}
+
+.listElement {
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.taskDiv,
+.editTaskDiv {
+  display: grid; /* Change to grid */
+  align-items: center;
+  grid-template-columns: auto 1fr auto auto;
+}
+
+#newTaskInput {
+  border: 1px solid;
+}
+
+/* Transitions */
+#tasksSection li {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#tasksSection li.slide-up {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+#tasksSection li.slide-down {
+  transform: translateY(20px);
+  opacity: 0;
+}
